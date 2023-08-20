@@ -1,4 +1,31 @@
 -- Functions
+USE BD2
+GO
+
+--Function 1 "Func_credits"
+CREATE FUNCTION GetStudentsInCourse
+(
+    @CourseCodCourse INT
+)
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT
+        ca.Id AS CourseAssignmentId,
+        u.Firstname,
+        u.Lastname,
+        u.Email
+    FROM
+        practica1.CourseAssignment ca
+    INNER JOIN
+        practica1.Usuarios u ON ca.StudentId = u.Id
+    WHERE
+        ca.CourseCodCourse = @CourseCodCourse
+);
+
+--Function 2 "Func_credits"
+
 
 --Function 4 "Func_logger"
 CREATE FUNCTION Func_logger()
