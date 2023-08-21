@@ -189,7 +189,7 @@
          @subject = @EmailSubject,
          @body = @EmailBody;
    END;
-
+   
    DECLARE @Firstname nvarchar(max) = 'John';
    DECLARE @Lastname nvarchar(max) = 'Doe';
    DECLARE @Email nvarchar(max) = 'socop2412@gmail.com';
@@ -197,4 +197,5 @@
    DECLARE @Password nvarchar(max) = 'SecurePassword123';
    DECLARE @Credits int = 0;
 
-   EXEC PR1 @UserId, @Firstname, @Lastname, @Email, @DateOfBirth, @Password, @EmailConfirmed, @Credits, @TFAStatus;
+   EXEC PR1 @Firstname, @Lastname, @Email, @DateOfBirth, @Password, @Credits;
+   DELETE FROM [practica1].[Usuarios] WHERE Email = @Email;
