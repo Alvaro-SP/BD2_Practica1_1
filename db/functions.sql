@@ -53,36 +53,30 @@ RETURN
 
 --Function 4 "Func_logger"
 CREATE FUNCTION Func_logger()
-RETURNS @results TABLE (
-    Id INT,
-    Date DATETIME2(7),
-    Description NVARCHAR(MAX)
-)
+RETURNS TABLE
 AS
-BEGIN
-    SELECT *
-    FROM historyLog;
-    RETURN;
-END;
+RETURN(
+SELECT *
+    FROM practica1.historyLog
+);
+
+-- Execute function 4 "Func_Logger"
+SELECT * FROM dbo.Func_logger();
 
 -- Function 5 "Func_usuarios"
 CREATE FUNCTION Func_usuarios(@UserId uniqueidentifier)
-RETURNS @results TABLE (
-  Firstname NVARCHAR(MAX),
-  Lastname NVARCHAR(MAX),
-  Email NVARCHAR(MAX),
-  DateOfBirth DATETIME2(7),
-  Credits INT,
-  RoleName NVARCHAR(MAX)
-)
+RETURNS TABLE
 AS
-BEGIN
-    SELECT u.Firstname, u.Lastname, u.Email, u.DateOfBirth, uc.Credits, r.RoleName
+RETURN(
+SELECT u.Firstname, u.Lastname, u.Email, u.DateOfBirth, uc.Credits, r.RoleName
     FROM practica1.Usuarios u
     INNER JOIN practica1.UsuarioRole ur ON u.Id = ur.UserId
     INNER JOIN practica1.Roles r ON ur.RoleId = r.Id
-    WHERE u.Id = @UserId;
-    RETURN;
-END;
+	INNER JOIN practica1.ProfileStudent uc ON ur.UserId = @UserId
+    WHERE u.Id = @UserId
+);
+
+-- Execute function 5 "Func_usuarios"
+SELECT * FROM dbo.Func_usuarios(5);
 
 
