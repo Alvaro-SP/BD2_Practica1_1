@@ -121,7 +121,8 @@
    END;
    GO
 
-
+-- ? █▀█ █▀▀ █▀▀ █ █▀ ▀█▀ █▀█ █▀█
+-- ? █▀▄ ██▄ █▄█ █ ▄█ ░█░ █▀▄ █▄█
 -- ! Procedure 1 "Registro de Usuarios"
    USE BD2
    GO
@@ -192,10 +193,74 @@
    
    DECLARE @Firstname nvarchar(max) = 'John';
    DECLARE @Lastname nvarchar(max) = 'Doe';
-   DECLARE @Email nvarchar(max) = 'socop2412@gmail.com';
+   DECLARE @Email nvarchar(max) = 'socop241ee2@gmail.com';
    DECLARE @DateOfBirth datetime2(7) = '1990-01-15';
    DECLARE @Password nvarchar(max) = 'SecurePassword123';
    DECLARE @Credits int = 0;
 
    EXEC PR1 @Firstname, @Lastname, @Email, @DateOfBirth, @Password, @Credits;
-   DELETE FROM [practica1].[Usuarios] WHERE Email = @Email;
+
+
+   -- UPDATE [practica1].[Usuarios] SET EmailConfirmed = 1 WHERE Email = 'socop241ee2@gmail.com';
+
+-- ! Procedure 2 "Cambio de Roles "
+   USE BD2
+   GO
+   IF OBJECT_ID('PR2', 'P') IS NOT NULL
+   BEGIN
+      DROP PROCEDURE PR1;
+   END;
+   GO
+   CREATE PROCEDURE PR2
+      @Email nvarchar(max),      --* Correo electrónico del estudiante/tutor
+      @CodCourse int             --* Código del curso a asignar como tutor
+   AS
+   BEGIN
+      --* Verificar si el usuario es un estudiante con cuenta activa
+      IF NOT EXISTS (SELECT 1 FROM [practica1].[Usuarios] WHERE Email = @Email AND EmailConfirmed = 1)
+      BEGIN
+         THROW 51000, 'El correo electrónico ya está registrado.', 1;
+         RETURN;
+      END;
+
+      -- Obtener el UserId del estudiante/tutor
+      DECLARE @UserId uniqueidentifier;
+      SELECT @UserId = Id FROM [practica1].[Usuarios] WHERE Email = @Email;
+
+      -- Verificar si el estudiante ya es tutor en el curso
+      IF EXISTS (SELECT 1 FROM [practica1].[CourseTutor] WHERE TutorId = @UserId AND CourseCodCourse = @CodCourse)
+      BEGIN
+         THROW 52000, 'El tutor ya es tutor de ese curso.', 1;
+         RETURN;
+      END;
+
+      -- Obtener el RoleId del rol de tutor
+      DECLARE @TutorRoleId uniqueidentifier;
+      SELECT @TutorRoleId = Id FROM [practica1].[Roles] WHERE RoleName = 'Tutor';
+
+      -- Agregar el rol de tutor al usuario en UsuarioRole
+      INSERT INTO [practica1].[UsuarioRole] (RoleId, UserId, IsLatestVersion)
+      VALUES (@TutorRoleId, @UserId, 1);
+
+      -- Agregar el perfil de tutor al usuario en TutorProfile
+      INSERT INTO [practica1].[TutorProfile] (UserId, TutorCode)
+      VALUES (@UserId, 'Código de Tutor X');
+
+      -- Asignar el estudiante como tutor en el curso en CourseTutor
+      INSERT INTO [practica1].[CourseTutor] (TutorId, CourseCodCourse)
+      VALUES (@UserId, @CodCourse);
+
+      -- Agregar una notificación al usuario
+      INSERT INTO [practica1].[Notification] (UserId, Message, Date)
+      VALUES (@UserId, 'Ha sido promovido al rol de tutor en el curso.', GETDATE());
+
+      -- Enviar un correo electrónico de notificación al usuario
+      DECLARE @EmailSubject nvarchar(max) = 'Promoción a Tutor';
+      DECLARE @EmailBody nvarchar(max) = 'Estimado ' + @Email + ', ha sido promovido al rol de tutor en el curso.';
+      
+      EXEC msdb.dbo.sp_send_dbmail
+         @profile_name = 'socop2412@gmail.com',  -- Nombre del perfil de correo electrónico configurado en SQL Server
+         @recipients = @Email,
+         @subject = @EmailSubject,
+         @body = @EmailBody;
+   END;
