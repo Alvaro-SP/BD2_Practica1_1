@@ -54,6 +54,6 @@ BEGIN
         PRINT 'Invalid @CourseCode value. Please provide a valid number.';
     END
 END;
-
+GO
 -- Example of execution
-EXEC PR5 1,'Idioma Técnico 1',10;
+EXEC PR5 773,'Manejo e Implementacion de Archivos',4;
