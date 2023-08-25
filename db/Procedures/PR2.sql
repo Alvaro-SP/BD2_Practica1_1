@@ -33,25 +33,34 @@
                     END;
                     ELSE
                         BEGIN
-                            -- Obtener el RoleId del rol de tutor
-                            DECLARE @TutorRoleId uniqueidentifier;
-                            SELECT @TutorRoleId = Id FROM [practica1].[Roles] WHERE RoleName = 'Tutor';
+                            -- Verificar si el curso ya tiene un tutor asignado
+                            IF EXISTS (SELECT 1 FROM [practica1].[CourseTutor] WHERE CourseCodCourse = @CodCourse)
+                            BEGIN
+                                PRINT 'El curso ya tiene un tutor asignado.';
+                            END;
+                            ELSE
+                                BEGIN
+                                    -- Obtener el RoleId del rol de tutor
+                                    DECLARE @TutorRoleId uniqueidentifier;
+                                    SELECT @TutorRoleId = Id FROM [practica1].[Roles] WHERE RoleName = 'Tutor';
 
-                            -- Agregar el rol de tutor al usuario en UsuarioRole
-                            INSERT INTO [practica1].[UsuarioRole] (RoleId, UserId, IsLatestVersion)
-                            VALUES (@TutorRoleId, @UserId, 1);
+                                    -- Agregar el rol de tutor al usuario en UsuarioRole
+                                    INSERT INTO [practica1].[UsuarioRole] (RoleId, UserId, IsLatestVersion)
+                                    VALUES (@TutorRoleId, @UserId, 1);
 
-                            -- Agregar el perfil de tutor al usuario en TutorProfile
-                            INSERT INTO [practica1].[TutorProfile] (UserId, TutorCode)
-                            VALUES (@UserId, 'Código de Tutor X');
+                                    -- Agregar el perfil de tutor al usuario en TutorProfile
+                                    INSERT INTO [practica1].[TutorProfile] (UserId, TutorCode)
+                                    VALUES (@UserId, 'Código de Tutor X');
 
-                            -- Asignar el estudiante como tutor en el curso en CourseTutor
-                            INSERT INTO [practica1].[CourseTutor] (TutorId, CourseCodCourse)
-                            VALUES (@UserId, @CodCourse);
+                                    -- Asignar el estudiante como tutor en el curso en CourseTutor
+                                    INSERT INTO [practica1].[CourseTutor] (TutorId, CourseCodCourse)
+                                    VALUES (@UserId, @CodCourse);
 
-                            -- Agregar una notificación al usuario
-                            INSERT INTO [practica1].[Notification] (UserId, Message, Date)
-                            VALUES (@UserId, 'Ha sido promovido al rol de tutor en el curso.', GETDATE());
+                                    -- Agregar una notificación al usuario
+                                    INSERT INTO [practica1].[Notification] (UserId, Message, Date)
+                                    VALUES (@UserId, 'Ha sido promovido al rol de tutor en el curso.', GETDATE());
+                                    PRINT 'El usuario ha sido promovido al rol de tutor en el curso.';
+                                END
                         END
                 END
         END TRY
@@ -59,7 +68,6 @@
         ROLLBACK; -- Rollback the transaction in case of an error
         THROW;    -- Re-throw the error
     END CATCH;
-    PRINT 'The user was promoted successfully.';
     COMMIT; -- Commit the transaction on successful completion
     END;
     GO
