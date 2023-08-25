@@ -5,48 +5,54 @@ CREATE PROCEDURE PR3
     @CodCourse INT
 AS
 BEGIN
-	-- Get the UserId based on the provided email
-   DECLARE @UserId UNIQUEIDENTIFIER;
-   SELECT @UserId = Id FROM [practica1].[Usuarios] WHERE [Email] = @Email;
-	-- Check if the user exists
-	IF @UserId IS NOT NULL BEGIN
+	-- Validate the email format
+	IF (LEN(@Email) > 0) AND (@Email LIKE '%_@__%.__%') BEGIN
 
-		-- Check if the student is already assigned to the course
-		IF NOT EXISTS (SELECT 1 FROM [practica1].[CourseAssignment] WHERE [StudentId] = @UserId AND [CourseCodCourse] = @CodCourse) BEGIN
+	   -- Get the UserId based on the provided email
+	   DECLARE @UserId UNIQUEIDENTIFIER;
+	   SELECT @UserId = Id FROM [practica1].[Usuarios] WHERE [Email] = @Email;
+		-- Check if the user exists
+		IF @UserId IS NOT NULL BEGIN
 
-			-- Get the credits required for the course
-            DECLARE @CreditsRequired INT;
-            SELECT @CreditsRequired = [CreditsRequired] FROM [practica1].[Course] WHERE [CodCourse] = @CodCourse;
+			-- Check if the student is already assigned to the course
+			IF NOT EXISTS (SELECT 1 FROM [practica1].[CourseAssignment] WHERE [StudentId] = @UserId AND [CourseCodCourse] = @CodCourse) BEGIN
 
-            -- Get the student's credits
-            DECLARE @StudentCredits INT;
-            SELECT @StudentCredits = [Credits] FROM [practica1].[ProfileStudent] WHERE [UserId] = @UserId;
+				-- Get the credits required for the course
+				DECLARE @CreditsRequired INT;
+				SELECT @CreditsRequired = [CreditsRequired] FROM [practica1].[Course] WHERE [CodCourse] = @CodCourse;
 
-			-- Check if the student has enough credits
-            IF @StudentCredits >= @CreditsRequired BEGIN
-				BEGIN TRANSACTION;
+				-- Get the student's credits
+				DECLARE @StudentCredits INT;
+				SELECT @StudentCredits = [Credits] FROM [practica1].[ProfileStudent] WHERE [UserId] = @UserId;
 
-				BEGIN TRY
+				-- Check if the student has enough credits
+				IF @StudentCredits >= @CreditsRequired BEGIN
+					BEGIN TRANSACTION;
 
-					-- Insert course assignment
-                    INSERT INTO [practica1].[CourseAssignment] ([StudentId], [CourseCodCourse])
-                    VALUES (@UserId, @CodCourse);
-					COMMIT;
+					BEGIN TRY
 
-				END TRY BEGIN CATCH
-					ROLLBACK;
-					PRINT 'Error al asignar el estudiante al curso';
-				END CATCH;
+						-- Insert course assignment
+						INSERT INTO [practica1].[CourseAssignment] ([StudentId], [CourseCodCourse])
+						VALUES (@UserId, @CodCourse);
+						COMMIT;
 
+					END TRY BEGIN CATCH
+						ROLLBACK;
+						PRINT 'Error al asignar el estudiante al curso';
+					END CATCH;
+
+				END ELSE BEGIN
+					PRINT 'El estudiante no tiene suficientes créditos para asignar este curso.';
+				END
 			END ELSE BEGIN
-				PRINT 'El estudiante no tiene suficientes créditos para asignar este curso.';
+				PRINT 'El estudiante ya está asignado a este curso.';
 			END
 		END ELSE BEGIN
-			PRINT 'El estudiante ya está asignado a este curso.';
-		END
+			PRINT 'El correo ingresado no corresponde a ningún usuario.';
+	   END
 	END ELSE BEGIN
-		PRINT 'El correo ingresado no corresponde a ningún usuario.';
-   END
+		PRINT 'El formato del correo electrónico no es válido.';
+	END
 END;
 
 GO
