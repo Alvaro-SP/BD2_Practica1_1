@@ -32,8 +32,22 @@ BEGIN
 					BEGIN TRY
 
 						-- Insert course assignment
+						INSERT INTO  [practica1].[Notification] ([UserId],[Message],[Date])
+						VALUES (@UserId,'Has sido asignado exitosamente al curso: '+CAST(@CodCourse AS NVARCHAR(50)),GETDATE())
+
 						INSERT INTO [practica1].[CourseAssignment] ([StudentId], [CourseCodCourse])
 						VALUES (@UserId, @CodCourse);
+
+						DECLARE @UserIdTutor UNIQUEIDENTIFIER;
+						SELECT @UserIdTutor = TutorId FROM [practica1].[CourseTutor] WHERE [CourseCodCourse] = @CodCourse;
+						
+						-- Check if the tutor exists
+						IF @UserIdTutor IS NOT NULL BEGIN
+							INSERT INTO  [practica1].[Notification] ([UserId],[Message],[Date])
+							VALUES (@UserIdTutor,'Se ha asignado un nuevo estuadinte al curso'+CAST(@CodCourse AS NVARCHAR(50)),GETDATE())
+						END
+
+						PRINT 'Estudiante asignado correctamente!';
 						COMMIT;
 
 					END TRY BEGIN CATCH
@@ -56,7 +70,7 @@ BEGIN
 END;
 
 GO
-EXEC PR3 'sergiearizandieta@gmail.com',1;
+EXEC PR3 'sergiearizandieta@gmail.com',773;
 
 -- inicializanido datos
 
@@ -76,3 +90,8 @@ EXEC PR3 'sergiearizandieta@gmail.com',1;
 -- VALUES ('F4E6D8FB-DF45-4C91-9794-38E043FD5ACD', '8BFE0823-0E7C-4D9E-B0BB-B46886D67641', 1);
 
 -- SELECT * FROM [practica1].[UsuarioRole];
+
+--INSERT INTO [practica1].[CourseTutor] ([TutorId], [CourseCodCourse])
+--VALUES ('8BFE0823-0E7C-4D9E-B0BB-B46886D67641', 773);
+
+--SELECT * FROM [practica1].[CourseTutor];
