@@ -41,10 +41,9 @@ USE BD2
                         VALUES (@UserId, @Credits);
 
                         --* Verificar y agregar el rol de estudiante en la tabla UsuarioRole
-                        DECLARE @StudentRoleId uniqueidentifier;
                         DECLARE @RoleId uniqueidentifier = NEWID(); 
-                        INSERT INTO [practica1].[Roles] (Id, RoleName) 
-                        VALUES (@RoleId, 'Estudiante')
+						SELECT @RoleId = [ID] FROM [practica1].[Roles]  WHERE [RoleName] = 'Student';
+
                         INSERT INTO [practica1].[UsuarioRole] (RoleId, UserId, IsLatestVersion)
                         VALUES (@RoleId, @UserId, 1);
 
