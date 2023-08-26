@@ -6,6 +6,13 @@ INSERT INTO [practica1].[Course] ([CodCourse], [Name], [CreditsRequired])
 VALUES (4, 'nombre_bueno_malos_creditos', '-1');
 
 
+INSERT INTO [practica1].[Usuarios] (Id, Firstname, Lastname, Email, DateOfBirth, Password, LastChanges, EmailConfirmed)
+VALUES (NEWID(), '111 firstname', 'Hernandez', 'sergie@gmail.com',GETDATE(), 'usac2023', GETDATE(), 1);
+
+INSERT INTO [practica1].[Usuarios] (Id, Firstname, Lastname, Email, DateOfBirth, Password, LastChanges, EmailConfirmed)
+VALUES (NEWID(), 'Luis', '222 Lastname', 'sergie@gmail.com',GETDATE(), 'usac2023', GETDATE(), 1);
+
+
 
 -- Course name constraint
 ALTER TABLE [practica1].[Course]
