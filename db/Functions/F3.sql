@@ -1,3 +1,5 @@
+DROP FUNCTION IF EXISTS dbo.Func_notification_usuarios;
+GO
 CREATE FUNCTION Func_notification_usuarios(@UserId uniqueidentifier)
 RETURNS TABLE
 AS

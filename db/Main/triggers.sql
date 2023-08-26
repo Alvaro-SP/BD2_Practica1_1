@@ -72,7 +72,7 @@ IF OBJECT_ID('practica1.trg_DeleteHistory_Usuarios', 'TR') IS NOT NULL
 IF OBJECT_ID('practica1.trg_UpdateHistory_Usuarios', 'TR') IS NOT NULL
     DROP TRIGGER practica1.trg_UpdateHistory_Usuarios;
 
-
+GO
 
 
 
