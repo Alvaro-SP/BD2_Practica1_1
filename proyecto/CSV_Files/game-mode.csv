@@ -1,0 +1,7 @@
+id,checksum,created_at,name,slug,updated_at,url
+1,a43b1688-f968-3541-0897-9735ffde1745,1298937600,Single player,single-player,1323216000,https://www.igdb.com/game_modes/single-player
+2,288b548c-11e4-d910-f037-21d4e6a33b38,1298937600,Multiplayer,multiplayer,1323216000,https://www.igdb.com/game_modes/multiplayer
+3,e8329d55-33e6-f7ae-ae09-2848cb7ccc90,1298937600,Co-operative,co-operative,1323216000,https://www.igdb.com/game_modes/co-operative
+4,98247b75-6f46-7c77-521f-0945c684d842,1298937600,Split screen,split-screen,1323216000,https://www.igdb.com/game_modes/split-screen
+5,307d1126-6e3b-9215-06f1-10c8ecce05b4,1298937600,Massively Multiplayer Online (MMO),massively-multiplayer-online-mmo,1323216000,https://www.igdb.com/game_modes/massively-multiplayer-online-mmo
+6,bfc388ac-0502-ba05-af25-3dcc94a0acf3,1588809600,Battle Royale,battle-royale,1588809600,https://www.igdb.com/game_modes/battle-royale
