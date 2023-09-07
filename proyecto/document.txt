@@ -1,0 +1,45 @@
+***************ALVARO*****************
+Age Rating
+Age Rating Content Description
+Alternative Name
+Artwork
+Character
+Character Mug Shot
+Collection
+Company
+Company Website
+External Game
+Franchise
+Game
+Game Engine
+
+***************ERWIN*****************
+Game Localization
+Game Mode
+Game Version
+Game Version Feature
+Game Version Feature Value
+Game Video
+Genre
+Involved Company
+Keyword
+Language Support
+Language Support Type
+
+
+***************SERGIE*****************
+Language *
+Multiplayer Mode *
+Platform *
+Platform Family *
+Platform Version *
+Platform Version Company *
+Platform Version Release Date *
+Platform Website *
+Player Perspective *
+Region *
+Release Date *
+Release Date Status *
+Search *
+Website *
+Theme *

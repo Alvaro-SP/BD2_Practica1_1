@@ -1,20 +1,12 @@
 import csv
 # import requests
 from requests import post
-# response = post('https://api.igdb.com/v4/age_ratings', 
-#                 **{'headers': {'Client-ID': 'id9o6yogun0iffjhw6ir4fcby7riop', 'Authorization': 'Bearer qr1028wr9ak8of1fm43nmx0891sjt2'},'data': 'fields category,checksum,content_descriptions,rating,rating_cover_url,synopsis; limit 500;'})
-# print ("response: %s" % str(response.json()))
 
-
-# Configuración de la solicitud inicial
-# url = 'https://api.igdb.com/v4/age_ratings'
 def jalarDatos(url, fields):
-    headers = {
-        'Client-ID': 'id9o6yogun0iffjhw6ir4fcby7riop',
-        'Authorization': 'Bearer qr1028wr9ak8of1fm43nmx0891sjt2'
-    }
+
     # Nombre del archivo CSV de salida
-    output_file = url.split("/")[4]+'.csv'
+    name_file = url.split("/")[4]+'.csv'
+    output_file = 'B:\GitHub\BD2_Practica1_1\proyecto\Sergie\\'+name_file
 
     # Inicializa el archivo CSV y escribe el encabezado
     with open(output_file, 'w', newline='') as csvfile:
@@ -36,6 +28,7 @@ def jalarDatos(url, fields):
 
         # Verifica si hay resultados
         if not response_json:
+            print(f'-----Terminado-----')
             break
 
         # Agrega los resultados al archivo CSV
@@ -50,50 +43,60 @@ def jalarDatos(url, fields):
         print(f'¡Guardado {offset} resultados!')
         offset += 500
 
+        if offset == 1000:
+            break
 
-    print(f'¡Datos guardados en {output_file}!')
+
+    print(f'¡Datos guardados en {name_file}!')
 
 
 urls = 'https://api.igdb.com/v4/'
-# jalarDatos('https://api.igdb.com/v4/age_ratings', 'category,checksum,content_descriptions,rating,rating_cover_url,synopsis')
-# c = 'category,checksum,description'
-# jalarDatos(urls+'age_rating_content_descriptions',("id,"+c))
 
-# c = 'checksum,comment,game,name'
-# jalarDatos(urls+'alternative_names',("id,"+c))
+# c = 'checksum,created_at,locale,name,native_name,updated_at'
+# jalarDatos(urls+'languages',("id,"+c))
 
-# c = 'alpha_channel,animated,checksum,game,height,image_id,url,width'
-# jalarDatos(urls+'artworks',("id,"+c))
+# c = 'campaigncoop,checksum,dropin,game,lancoop,offlinecoop,offlinecoopmax,offlinemax,onlinecoop,onlinecoopmax,onlinemax,platform,splitscreen,splitscreenonline'
+# jalarDatos(urls+'multiplayer_modes',("id,"+c))
 
-# c = 'akas,checksum,country_name,created_at,description,games,gender,mug_shot,name,slug,species,updated_at,url'
-# jalarDatos(urls+'characters',("id,"+c))
+# c = 'abbreviation,alternative_name,category,checksum,created_at,generation,name,platform_family,platform_logo,slug,summary,updated_at,url,versions,websites'
+# jalarDatos(urls+'platforms',("id,"+c))
 
-# c = 'alpha_channel,animated,checksum,height,image_id,url,width'
-# jalarDatos(urls+'character_mug_shots',("id,"+c))
+# c = 'checksum,name,slug'
+# jalarDatos(urls+'platform_families',("id,"+c))
 
-# c = 'checksum,created_at,games,name,slug,updated_at,url'
-# jalarDatos(urls+'collections',("id,"+c))
+# c = 'checksum,companies,connectivity,cpu,graphics,main_manufacturer,media,memory,name,online,os,output,platform_logo,platform_version_release_dates,resolutions,slug,sound,storage,summary,url'
+# jalarDatos(urls+'platform_versions',("id,"+c))
 
-# c = 'change_date,change_date_category,changed_company_id,checksum,country,created_at,description,developed,logo,name,parent,published,slug,start_date,start_date_category,updated_at,url,websites'
-# jalarDatos(urls+'companies',("id,"+c))
+# c = 'checksum,comment,company,developer,manufacturer'
+# jalarDatos(urls+'platform_version_companies',("id,"+c))
 
-# c = 'alpha_channel,animated,checksum,height,image_id,url,width'
-# jalarDatos(urls+'company_logos',("id,"+c))
+# c = 'category,checksum,created_at,date,human,m,platform_version,region,updated_at,y'
+# jalarDatos(urls+'platform_version_release_dates',("id,"+c))
 
 # c = 'category,checksum,trusted,url'
-# jalarDatos(urls+'company_websites',("id,"+c))
+# jalarDatos(urls+'platform_websites',("id,"+c))
 
-# c = 'alpha_channel,animated,checksum,game,game_localization,height,image_id,url,width'
-# jalarDatos(urls+'covers',("id,"+c))
+# c = 'checksum,created_at,name,slug,updated_at,url'
+# jalarDatos(urls+'player_perspectives',("id,"+c))
 
-c = 'category,checksum,countries,created_at,game,media,name,platform,uid,updated_at,url,year'
-jalarDatos(urls+'external_games',("id,"+c))
+# c = 'category,checksum,created_at,identifier,name,updated_at'
+# jalarDatos(urls+'regions',("id,"+c))
 
-c = 'checksum,created_at,games,name,slug,updated_at,url'
-jalarDatos(urls+'franchises',("id,"+c))
+# c = 'category,checksum,created_at,date,game,human,m,platform,region,status,updated_at,y'
+# jalarDatos(urls+'release_dates',("id,"+c))
 
-c = 'age_ratings,aggregated_rating,aggregated_rating_count,alternative_names,artworks,bundles,category,checksum,collection,cover,created_at,dlcs,expanded_games,expansions,external_games,first_release_date,follows,forks,franchise,franchises,game_engines,game_localizations,game_modes,genres,hypes,involved_companies,keywords,language_supports,multiplayer_modes,name,parent_game,platforms,player_perspectives,ports,rating,rating_count,release_dates,remakes,remasters,screenshots,similar_games,slug,standalone_expansions,status,storyline,summary,tags,themes,total_rating,total_rating_count,updated_at,url,version_parent,version_title,videos,websites'
-jalarDatos(urls+'games',("id,"+c))
+# c = 'checksum,created_at,description,name,updated_at'
+# jalarDatos(urls+'release_date_statuses',("id,"+c))
 
-c = 'checksum,companies,created_at,description,logo,name,platforms,slug,updated_at,url'
-jalarDatos(urls+'game_engines',("id,"+c))
+# c = 'alternative_name,character,checksum,collection,company,description,game,name,platform,published_at,test_dummy,theme'
+# jalarDatos(urls+'search',("id,"+c))
+
+# c = 'category,checksum,game,trusted,url'
+# jalarDatos(urls+'websites',("id,"+c))
+
+c = 'checksum,created_at,name,slug,updated_at,url'
+jalarDatos(urls+'themes',("id,"+c))
+
+
+
+
