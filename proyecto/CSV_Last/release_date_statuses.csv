@@ -1,0 +1,7 @@
+id,checksum,created_at,description,name,updated_at
+4,87e2ef38-145b-7a64-de70-9d74e22cef6b,1677688062,A status of a release that shows when the game was offline for a specific platform and region.,Offline,1677688062
+6,592d3a03-d379-5494-af90-01cf40b3cc6f,1677688062,A status of release where the game has gone gold. Typically this is referred to as 1.0.,Full Release,1677688062
+2,4e6af7f4-3e3f-b09d-fb85-b012eb4dc1aa,1677688062,A status of a release where all major milestones have been met.  Typically this release is used for finding bugs and lacks optimization.,Beta,1677688062
+1,498d5473-e87e-b8a4-0c45-a3d5f0967c04,1677688062,A status of a release where milestones have been met and the game is in a playable state.,Alpha,1677688062
+5,1493ed8d-efda-414b-26c1-1aa7917052cb,1677688062,A status of a release that shows when the game was cancelled for a specific platform and region.,Cancelled,1677688062
+3,154f152d-19cc-a9e8-8989-81dfe7474572,1677688062,A status of a release where the game is usually available publicly for testing.  Early access is used to get player feedback before a full release.,Early Access,1677688062
