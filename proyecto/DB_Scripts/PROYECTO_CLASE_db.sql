@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [PROYECTO_CLASE]    Script Date: 9/09/2023 00:57:32 ******/
+/****** Object:  Database [PROYECTO_CLASE]    Script Date: 9/09/2023 08:06:01 ******/
 CREATE DATABASE [PROYECTO_CLASE]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -84,7 +84,7 @@ ALTER DATABASE [PROYECTO_CLASE] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CL
 GO
 USE [PROYECTO_CLASE]
 GO
-/****** Object:  Table [dbo].[age_rating_content_descriptions]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[age_rating_content_descriptions]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -100,7 +100,7 @@ CREATE TABLE [dbo].[age_rating_content_descriptions](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[age_ratings]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[age_ratings]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -119,7 +119,7 @@ CREATE TABLE [dbo].[age_ratings](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[alternative_names]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[alternative_names]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -136,28 +136,7 @@ CREATE TABLE [dbo].[alternative_names](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[artworks]    Script Date: 9/09/2023 00:57:33 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[artworks](
-	[id] [int] NOT NULL,
-	[alpha_channel] [varchar](5) NULL,
-	[animated] [varchar](5) NULL,
-	[checksum] [varchar](36) NULL,
-	[game] [int] NULL,
-	[height] [int] NULL,
-	[image_id] [varchar](max) NULL,
-	[url] [varchar](max) NULL,
-	[width] [int] NULL,
- CONSTRAINT [PK_artworks] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[character_mug_shots]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[character_mug_shots]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -176,7 +155,7 @@ CREATE TABLE [dbo].[character_mug_shots](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[characters]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[characters]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -202,7 +181,7 @@ CREATE TABLE [dbo].[characters](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[collections]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[collections]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -222,7 +201,7 @@ CREATE TABLE [dbo].[collections](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[companies]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[companies]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -253,7 +232,7 @@ CREATE TABLE [dbo].[companies](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[company_websites]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[company_websites]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -270,7 +249,7 @@ CREATE TABLE [dbo].[company_websites](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[external_games]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[external_games]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -295,7 +274,7 @@ CREATE TABLE [dbo].[external_games](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[franchises]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[franchises]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -315,7 +294,7 @@ CREATE TABLE [dbo].[franchises](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_engines]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[game_engines]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -338,7 +317,7 @@ CREATE TABLE [dbo].[game_engines](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_localizations]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[game_localizations]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -357,7 +336,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_modes]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[game_modes]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -376,7 +355,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_version_feature_values]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[game_version_feature_values]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -393,7 +372,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_version_features]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[game_version_features]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -412,7 +391,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_versions]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[game_versions]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -432,7 +411,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_videos]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[game_videos]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -449,7 +428,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[games]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[games]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -518,7 +497,7 @@ CREATE TABLE [dbo].[games](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[genres]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[genres]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -537,7 +516,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[involved_companies]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[involved_companies]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -559,7 +538,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[keywords]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[keywords]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -578,7 +557,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[language_support_types]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[language_support_types]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -595,7 +574,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[language_supports]    Script Date: 9/09/2023 00:57:33 ******/
+/****** Object:  Table [dbo].[language_supports]    Script Date: 9/09/2023 08:06:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -614,15 +593,334 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+/****** Object:  Table [dbo].[languages]    Script Date: 9/09/2023 08:06:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[languages](
+	[id] [int] NOT NULL,
+	[checksum] [varchar](36) NULL,
+	[created_at] [bigint] NULL,
+	[locale] [nvarchar](10) NULL,
+	[name] [nvarchar](100) NULL,
+	[native_name] [nvarchar](100) NULL,
+	[updated_at] [bigint] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[multiplayer_modes]    Script Date: 9/09/2023 08:06:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[multiplayer_modes](
+	[id] [int] NOT NULL,
+	[campaigncoop] [varchar](5) NULL,
+	[checksum] [varchar](36) NULL,
+	[dropin] [varchar](5) NULL,
+	[game] [int] NULL,
+	[lancoop] [varchar](5) NULL,
+	[offlinecoop] [varchar](5) NULL,
+	[offlinecoopmax] [int] NULL,
+	[offlinemax] [int] NULL,
+	[onlinecoop] [varchar](5) NULL,
+	[onlinecoopmax] [int] NULL,
+	[onlinemax] [int] NULL,
+	[platform] [int] NULL,
+	[splitscreen] [varchar](5) NULL,
+	[splitscreenonline] [varchar](5) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[platform_families]    Script Date: 9/09/2023 08:06:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[platform_families](
+	[id] [int] NOT NULL,
+	[checksum] [varchar](36) NULL,
+	[name] [varchar](max) NULL,
+	[slug] [varchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[platform_version_companies]    Script Date: 9/09/2023 08:06:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[platform_version_companies](
+	[id] [int] NOT NULL,
+	[checksum] [varchar](36) NULL,
+	[comment] [varchar](max) NULL,
+	[company] [int] NULL,
+	[developer] [varchar](5) NULL,
+	[manufacturer] [varchar](5) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[platform_version_release_dates]    Script Date: 9/09/2023 08:06:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[platform_version_release_dates](
+	[id] [int] NOT NULL,
+	[category] [int] NULL,
+	[checksum] [varchar](36) NULL,
+	[created_at] [bigint] NULL,
+	[date] [bigint] NULL,
+	[human] [varchar](max) NULL,
+	[m] [int] NULL,
+	[platform_version] [int] NULL,
+	[region] [int] NULL,
+	[updated_at] [bigint] NULL,
+	[y] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[platform_versions]    Script Date: 9/09/2023 08:06:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[platform_versions](
+	[id] [int] NOT NULL,
+	[checksum] [varchar](36) NULL,
+	[companies] [varchar](max) NULL,
+	[connectivity] [varchar](max) NULL,
+	[cpu] [varchar](max) NULL,
+	[graphics] [varchar](max) NULL,
+	[main_manufacturer] [int] NULL,
+	[media] [varchar](max) NULL,
+	[memory] [varchar](max) NULL,
+	[name] [varchar](max) NULL,
+	[online] [varchar](max) NULL,
+	[os] [varchar](max) NULL,
+	[output] [varchar](max) NULL,
+	[platform_logo] [int] NULL,
+	[platform_version_release_dates] [varchar](max) NULL,
+	[resolutions] [varchar](max) NULL,
+	[slug] [varchar](max) NULL,
+	[sound] [varchar](max) NULL,
+	[storage] [varchar](max) NULL,
+	[summary] [varchar](max) NULL,
+	[url] [varchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[platform_websites]    Script Date: 9/09/2023 08:06:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[platform_websites](
+	[id] [int] NOT NULL,
+	[category] [int] NULL,
+	[checksum] [varchar](36) NULL,
+	[trusted] [varchar](5) NULL,
+	[url] [varchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[platforms]    Script Date: 9/09/2023 08:06:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[platforms](
+	[id] [int] NOT NULL,
+	[abbreviation] [varchar](max) NULL,
+	[alternative_name] [varchar](max) NULL,
+	[category] [int] NULL,
+	[checksum] [varchar](36) NULL,
+	[created_at] [bigint] NULL,
+	[generation] [int] NULL,
+	[name] [varchar](max) NULL,
+	[platform_family] [int] NULL,
+	[platform_logo] [int] NULL,
+	[slug] [varchar](max) NULL,
+	[summary] [varchar](max) NULL,
+	[updated_at] [bigint] NULL,
+	[url] [varchar](max) NULL,
+	[versions] [varchar](max) NULL,
+	[websites] [varchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[player_perspectives]    Script Date: 9/09/2023 08:06:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[player_perspectives](
+	[id] [int] NOT NULL,
+	[checksum] [varchar](36) NULL,
+	[created_at] [bigint] NULL,
+	[name] [varchar](max) NULL,
+	[slug] [varchar](max) NULL,
+	[updated_at] [bigint] NULL,
+	[url] [varchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[regions]    Script Date: 9/09/2023 08:06:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[regions](
+	[id] [int] NOT NULL,
+	[category] [varchar](max) NULL,
+	[checksum] [varchar](36) NULL,
+	[created_at] [bigint] NULL,
+	[identifier] [varchar](max) NULL,
+	[name] [varchar](max) NULL,
+	[updated_at] [bigint] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[release_date_statuses]    Script Date: 9/09/2023 08:06:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[release_date_statuses](
+	[id] [int] NOT NULL,
+	[checksum] [varchar](36) NULL,
+	[created_at] [bigint] NULL,
+	[description] [varchar](max) NULL,
+	[name] [varchar](max) NULL,
+	[updated_at] [bigint] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[release_dates]    Script Date: 9/09/2023 08:06:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[release_dates](
+	[id] [int] NOT NULL,
+	[category] [int] NULL,
+	[checksum] [varchar](36) NULL,
+	[created_at] [bigint] NULL,
+	[date] [bigint] NULL,
+	[game] [int] NULL,
+	[human] [varchar](max) NULL,
+	[m] [int] NULL,
+	[platform] [int] NULL,
+	[region] [int] NULL,
+	[status] [int] NULL,
+	[updated_at] [bigint] NULL,
+	[y] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[search]    Script Date: 9/09/2023 08:06:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[search](
+	[id] [int] NOT NULL,
+	[alternative_name] [varchar](max) NULL,
+	[character] [int] NULL,
+	[checksum] [varchar](36) NULL,
+	[collection] [int] NULL,
+	[company] [int] NULL,
+	[description] [varchar](max) NULL,
+	[game] [int] NULL,
+	[name] [varchar](max) NULL,
+	[platform] [int] NULL,
+	[published_at] [bigint] NULL,
+	[test_dummy] [int] NULL,
+	[theme] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[themes]    Script Date: 9/09/2023 08:06:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[themes](
+	[id] [int] NOT NULL,
+	[checksum] [varchar](36) NULL,
+	[created_at] [bigint] NULL,
+	[name] [varchar](max) NULL,
+	[slug] [varchar](max) NULL,
+	[updated_at] [bigint] NULL,
+	[url] [varchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[websites]    Script Date: 9/09/2023 08:06:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[websites](
+	[id] [int] NOT NULL,
+	[category] [int] NULL,
+	[checksum] [varchar](36) NULL,
+	[game] [int] NULL,
+	[trusted] [varchar](5) NULL,
+	[url] [varchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
 ALTER TABLE [dbo].[alternative_names]  WITH CHECK ADD  CONSTRAINT [FK_alternative_names_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
 ALTER TABLE [dbo].[alternative_names] CHECK CONSTRAINT [FK_alternative_names_games]
-GO
-ALTER TABLE [dbo].[artworks]  WITH CHECK ADD  CONSTRAINT [FK_artworks_games] FOREIGN KEY([game])
-REFERENCES [dbo].[games] ([id])
-GO
-ALTER TABLE [dbo].[artworks] CHECK CONSTRAINT [FK_artworks_games]
 GO
 ALTER TABLE [dbo].[characters]  WITH CHECK ADD  CONSTRAINT [FK_characters_character_mug_shots] FOREIGN KEY([mug_shot])
 REFERENCES [dbo].[character_mug_shots] ([id])
@@ -688,6 +986,81 @@ ALTER TABLE [dbo].[language_supports]  WITH CHECK ADD  CONSTRAINT [FK_language_s
 REFERENCES [dbo].[language_support_types] ([id])
 GO
 ALTER TABLE [dbo].[language_supports] CHECK CONSTRAINT [FK_language_supports_language_support_types]
+GO
+ALTER TABLE [dbo].[multiplayer_modes]  WITH CHECK ADD  CONSTRAINT [FK_multiplayer_modes_games] FOREIGN KEY([game])
+REFERENCES [dbo].[games] ([id])
+GO
+ALTER TABLE [dbo].[multiplayer_modes] CHECK CONSTRAINT [FK_multiplayer_modes_games]
+GO
+ALTER TABLE [dbo].[multiplayer_modes]  WITH CHECK ADD  CONSTRAINT [FK_multiplayer_modes_platforms] FOREIGN KEY([platform])
+REFERENCES [dbo].[platforms] ([id])
+GO
+ALTER TABLE [dbo].[multiplayer_modes] CHECK CONSTRAINT [FK_multiplayer_modes_platforms]
+GO
+ALTER TABLE [dbo].[platform_version_companies]  WITH CHECK ADD  CONSTRAINT [FK_platform_version_companies_companies] FOREIGN KEY([company])
+REFERENCES [dbo].[companies] ([id])
+GO
+ALTER TABLE [dbo].[platform_version_companies] CHECK CONSTRAINT [FK_platform_version_companies_companies]
+GO
+ALTER TABLE [dbo].[platform_version_release_dates]  WITH CHECK ADD  CONSTRAINT [FK_platform_version_release_dates_platform_versions] FOREIGN KEY([platform_version])
+REFERENCES [dbo].[platform_versions] ([id])
+GO
+ALTER TABLE [dbo].[platform_version_release_dates] CHECK CONSTRAINT [FK_platform_version_release_dates_platform_versions]
+GO
+ALTER TABLE [dbo].[platform_versions]  WITH CHECK ADD  CONSTRAINT [FK_platform_versions_platform_version_companies] FOREIGN KEY([main_manufacturer])
+REFERENCES [dbo].[platform_version_companies] ([id])
+GO
+ALTER TABLE [dbo].[platform_versions] CHECK CONSTRAINT [FK_platform_versions_platform_version_companies]
+GO
+ALTER TABLE [dbo].[platforms]  WITH CHECK ADD  CONSTRAINT [FK_platforms_platform_families] FOREIGN KEY([platform_family])
+REFERENCES [dbo].[platform_families] ([id])
+GO
+ALTER TABLE [dbo].[platforms] CHECK CONSTRAINT [FK_platforms_platform_families]
+GO
+ALTER TABLE [dbo].[release_dates]  WITH CHECK ADD  CONSTRAINT [FK_release_dates_games] FOREIGN KEY([game])
+REFERENCES [dbo].[games] ([id])
+GO
+ALTER TABLE [dbo].[release_dates] CHECK CONSTRAINT [FK_release_dates_games]
+GO
+ALTER TABLE [dbo].[release_dates]  WITH CHECK ADD  CONSTRAINT [FK_release_dates_platforms] FOREIGN KEY([platform])
+REFERENCES [dbo].[platforms] ([id])
+GO
+ALTER TABLE [dbo].[release_dates] CHECK CONSTRAINT [FK_release_dates_platforms]
+GO
+ALTER TABLE [dbo].[release_dates]  WITH CHECK ADD  CONSTRAINT [FK_release_dates_release_date_statuses] FOREIGN KEY([status])
+REFERENCES [dbo].[release_date_statuses] ([id])
+GO
+ALTER TABLE [dbo].[release_dates] CHECK CONSTRAINT [FK_release_dates_release_date_statuses]
+GO
+ALTER TABLE [dbo].[search]  WITH CHECK ADD  CONSTRAINT [FK_search_collections] FOREIGN KEY([collection])
+REFERENCES [dbo].[collections] ([id])
+GO
+ALTER TABLE [dbo].[search] CHECK CONSTRAINT [FK_search_collections]
+GO
+ALTER TABLE [dbo].[search]  WITH CHECK ADD  CONSTRAINT [FK_search_companies] FOREIGN KEY([company])
+REFERENCES [dbo].[companies] ([id])
+GO
+ALTER TABLE [dbo].[search] CHECK CONSTRAINT [FK_search_companies]
+GO
+ALTER TABLE [dbo].[search]  WITH CHECK ADD  CONSTRAINT [FK_search_games] FOREIGN KEY([game])
+REFERENCES [dbo].[games] ([id])
+GO
+ALTER TABLE [dbo].[search] CHECK CONSTRAINT [FK_search_games]
+GO
+ALTER TABLE [dbo].[search]  WITH CHECK ADD  CONSTRAINT [FK_search_platforms] FOREIGN KEY([platform])
+REFERENCES [dbo].[platforms] ([id])
+GO
+ALTER TABLE [dbo].[search] CHECK CONSTRAINT [FK_search_platforms]
+GO
+ALTER TABLE [dbo].[search]  WITH CHECK ADD  CONSTRAINT [FK_search_themes] FOREIGN KEY([theme])
+REFERENCES [dbo].[themes] ([id])
+GO
+ALTER TABLE [dbo].[search] CHECK CONSTRAINT [FK_search_themes]
+GO
+ALTER TABLE [dbo].[websites]  WITH CHECK ADD  CONSTRAINT [FK_websites_games] FOREIGN KEY([game])
+REFERENCES [dbo].[games] ([id])
+GO
+ALTER TABLE [dbo].[websites] CHECK CONSTRAINT [FK_websites_games]
 GO
 USE [master]
 GO
