@@ -34,40 +34,7 @@ BEGIN
 	RETURN @genreNames;
 END;
 GO
-DROP FUNCTION IF EXISTS obtenerPlataformas;
-GO
-CREATE FUNCTION dbo.obtenerPlataformas
-(
-    @idList NVARCHAR(MAX)
-)
-RETURNS NVARCHAR(MAX)
-AS
-BEGIN
-	DECLARE @genreNames NVARCHAR(MAX) = '';
-	
-	IF @idList IS NULL
-		BEGIN
-			RETURN 'Sin informacion';
-		END
-	ELSE
-	BEGIN
-		DECLARE @idArray NVARCHAR(MAX) = '';
-		-- Eliminar los corchetes "[" y "]" del arreglo
-		SET @idArray = REPLACE(REPLACE(@idList, '[', ''), ']', '');
 
-		-- Consulta para obtener los nombres de géneros basados en la lista de IDs
-		SELECT @genreNames = @genreNames + name + ', '
-		FROM [PROYECTO_CLASE].[dbo].[platforms]
-		WHERE CHARINDEX(CAST(Id AS NVARCHAR(MAX)), @idArray + ',') > 0;
-
-		-- Eliminar la coma adicional al final
-		SET @genreNames = LEFT(@genreNames, LEN(@genreNames) - 1);
-
-	END
-	RETURN @genreNames;
-END;
-
-GO
 DROP VIEW IF EXISTS consulta1;
 GO
 CREATE VIEW consulta1
