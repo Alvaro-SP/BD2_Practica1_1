@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [PROYECTO_CLASE]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Database [PROYECTO_CLASE]    Script Date: 20/09/2023 09:16:13 ******/
 CREATE DATABASE [PROYECTO_CLASE]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -84,7 +84,7 @@ ALTER DATABASE [PROYECTO_CLASE] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CL
 GO
 USE [PROYECTO_CLASE]
 GO
-/****** Object:  Table [dbo].[age_rating_content_descriptions]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[age_rating_content_descriptions]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -100,7 +100,7 @@ CREATE TABLE [dbo].[age_rating_content_descriptions](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[age_ratings]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[age_ratings]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -119,7 +119,7 @@ CREATE TABLE [dbo].[age_ratings](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[alternative_names]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[alternative_names]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -136,7 +136,7 @@ CREATE TABLE [dbo].[alternative_names](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[character_mug_shots]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[character_mug_shots]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -155,7 +155,7 @@ CREATE TABLE [dbo].[character_mug_shots](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[characters]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[characters]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -181,7 +181,7 @@ CREATE TABLE [dbo].[characters](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[collections]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[collections]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -201,7 +201,7 @@ CREATE TABLE [dbo].[collections](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[companies]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[companies]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -232,7 +232,7 @@ CREATE TABLE [dbo].[companies](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[company_websites]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[company_websites]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -249,7 +249,7 @@ CREATE TABLE [dbo].[company_websites](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[external_games]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[external_games]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -274,7 +274,7 @@ CREATE TABLE [dbo].[external_games](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[franchises]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[franchises]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -294,7 +294,7 @@ CREATE TABLE [dbo].[franchises](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_engines]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[game_engines]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -317,7 +317,7 @@ CREATE TABLE [dbo].[game_engines](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_localizations]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[game_localizations]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -336,7 +336,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_modes]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[game_modes]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -355,7 +355,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_version_feature_values]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[game_version_feature_values]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -372,7 +372,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_version_features]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[game_version_features]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -391,7 +391,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_versions]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[game_versions]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -411,7 +411,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[game_videos]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[game_videos]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -428,7 +428,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[games]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[games]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -497,7 +497,7 @@ CREATE TABLE [dbo].[games](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[genres]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[genres]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -516,7 +516,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[involved_companies]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[involved_companies]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -538,7 +538,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[keywords]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[keywords]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -557,7 +557,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[language_support_types]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[language_support_types]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -574,7 +574,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[language_supports]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[language_supports]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -593,7 +593,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[languages]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[languages]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -612,7 +612,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[multiplayer_modes]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[multiplayer_modes]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -639,7 +639,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[platform_families]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[platform_families]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -655,7 +655,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[platform_version_companies]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[platform_version_companies]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -673,7 +673,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[platform_version_release_dates]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[platform_version_release_dates]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -696,7 +696,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[platform_versions]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[platform_versions]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -729,7 +729,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[platform_websites]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[platform_websites]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -746,7 +746,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[platforms]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[platforms]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -774,7 +774,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[player_perspectives]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[player_perspectives]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -793,7 +793,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[regions]    Script Date: 9/09/2023 08:06:01 ******/
+/****** Object:  Table [dbo].[regions]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -812,7 +812,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[release_date_statuses]    Script Date: 9/09/2023 08:06:02 ******/
+/****** Object:  Table [dbo].[release_date_statuses]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -830,7 +830,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[release_dates]    Script Date: 9/09/2023 08:06:02 ******/
+/****** Object:  Table [dbo].[release_dates]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -855,7 +855,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[search]    Script Date: 9/09/2023 08:06:02 ******/
+/****** Object:  Table [dbo].[search]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -880,7 +880,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[themes]    Script Date: 9/09/2023 08:06:02 ******/
+/****** Object:  Table [dbo].[themes]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -899,7 +899,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[websites]    Script Date: 9/09/2023 08:06:02 ******/
+/****** Object:  Table [dbo].[websites]    Script Date: 20/09/2023 09:16:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -917,150 +917,150 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[alternative_names]  WITH CHECK ADD  CONSTRAINT [FK_alternative_names_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[alternative_names]  WITH NOCHECK ADD  CONSTRAINT [FK_alternative_names_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[alternative_names] CHECK CONSTRAINT [FK_alternative_names_games]
+ALTER TABLE [dbo].[alternative_names] NOCHECK CONSTRAINT [FK_alternative_names_games]
 GO
-ALTER TABLE [dbo].[characters]  WITH CHECK ADD  CONSTRAINT [FK_characters_character_mug_shots] FOREIGN KEY([mug_shot])
+ALTER TABLE [dbo].[characters]  WITH NOCHECK ADD  CONSTRAINT [FK_characters_character_mug_shots] FOREIGN KEY([mug_shot])
 REFERENCES [dbo].[character_mug_shots] ([id])
 GO
-ALTER TABLE [dbo].[characters] CHECK CONSTRAINT [FK_characters_character_mug_shots]
+ALTER TABLE [dbo].[characters] NOCHECK CONSTRAINT [FK_characters_character_mug_shots]
 GO
-ALTER TABLE [dbo].[companies]  WITH CHECK ADD  CONSTRAINT [FK_companies_companies] FOREIGN KEY([changed_company_id])
+ALTER TABLE [dbo].[companies]  WITH NOCHECK ADD  CONSTRAINT [FK_companies_companies] FOREIGN KEY([changed_company_id])
 REFERENCES [dbo].[companies] ([id])
 GO
-ALTER TABLE [dbo].[companies] CHECK CONSTRAINT [FK_companies_companies]
+ALTER TABLE [dbo].[companies] NOCHECK CONSTRAINT [FK_companies_companies]
 GO
-ALTER TABLE [dbo].[companies]  WITH CHECK ADD  CONSTRAINT [FK_companies_companies1] FOREIGN KEY([parent])
+ALTER TABLE [dbo].[companies]  WITH NOCHECK ADD  CONSTRAINT [FK_companies_companies1] FOREIGN KEY([parent])
 REFERENCES [dbo].[companies] ([id])
 GO
-ALTER TABLE [dbo].[companies] CHECK CONSTRAINT [FK_companies_companies1]
+ALTER TABLE [dbo].[companies] NOCHECK CONSTRAINT [FK_companies_companies1]
 GO
-ALTER TABLE [dbo].[external_games]  WITH CHECK ADD  CONSTRAINT [FK_external_games_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[external_games]  WITH NOCHECK ADD  CONSTRAINT [FK_external_games_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[external_games] CHECK CONSTRAINT [FK_external_games_games]
+ALTER TABLE [dbo].[external_games] NOCHECK CONSTRAINT [FK_external_games_games]
 GO
-ALTER TABLE [dbo].[game_version_feature_values]  WITH CHECK ADD  CONSTRAINT [FK_game_version_feature_values_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[game_version_feature_values]  WITH NOCHECK ADD  CONSTRAINT [FK_game_version_feature_values_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[game_version_feature_values] CHECK CONSTRAINT [FK_game_version_feature_values_games]
+ALTER TABLE [dbo].[game_version_feature_values] NOCHECK CONSTRAINT [FK_game_version_feature_values_games]
 GO
-ALTER TABLE [dbo].[game_versions]  WITH CHECK ADD  CONSTRAINT [FK_game_versions_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[game_versions]  WITH NOCHECK ADD  CONSTRAINT [FK_game_versions_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[game_versions] CHECK CONSTRAINT [FK_game_versions_games]
+ALTER TABLE [dbo].[game_versions] NOCHECK CONSTRAINT [FK_game_versions_games]
 GO
-ALTER TABLE [dbo].[game_videos]  WITH CHECK ADD  CONSTRAINT [FK_game_videos_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[game_videos]  WITH NOCHECK ADD  CONSTRAINT [FK_game_videos_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[game_videos] CHECK CONSTRAINT [FK_game_videos_games]
+ALTER TABLE [dbo].[game_videos] NOCHECK CONSTRAINT [FK_game_videos_games]
 GO
-ALTER TABLE [dbo].[games]  WITH CHECK ADD  CONSTRAINT [FK_games_collections] FOREIGN KEY([collection])
+ALTER TABLE [dbo].[games]  WITH NOCHECK ADD  CONSTRAINT [FK_games_collections] FOREIGN KEY([collection])
 REFERENCES [dbo].[collections] ([id])
 GO
-ALTER TABLE [dbo].[games] CHECK CONSTRAINT [FK_games_collections]
+ALTER TABLE [dbo].[games] NOCHECK CONSTRAINT [FK_games_collections]
 GO
-ALTER TABLE [dbo].[games]  WITH CHECK ADD  CONSTRAINT [FK_games_franchises] FOREIGN KEY([franchise])
+ALTER TABLE [dbo].[games]  WITH NOCHECK ADD  CONSTRAINT [FK_games_franchises] FOREIGN KEY([franchise])
 REFERENCES [dbo].[franchises] ([id])
 GO
-ALTER TABLE [dbo].[games] CHECK CONSTRAINT [FK_games_franchises]
+ALTER TABLE [dbo].[games] NOCHECK CONSTRAINT [FK_games_franchises]
 GO
 ALTER TABLE [dbo].[involved_companies]  WITH CHECK ADD  CONSTRAINT [FK_involved_companies_companies] FOREIGN KEY([company])
 REFERENCES [dbo].[companies] ([id])
 GO
 ALTER TABLE [dbo].[involved_companies] CHECK CONSTRAINT [FK_involved_companies_companies]
 GO
-ALTER TABLE [dbo].[involved_companies]  WITH CHECK ADD  CONSTRAINT [FK_involved_companies_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[involved_companies]  WITH NOCHECK ADD  CONSTRAINT [FK_involved_companies_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[involved_companies] CHECK CONSTRAINT [FK_involved_companies_games]
+ALTER TABLE [dbo].[involved_companies] NOCHECK CONSTRAINT [FK_involved_companies_games]
 GO
-ALTER TABLE [dbo].[language_supports]  WITH CHECK ADD  CONSTRAINT [FK_language_supports_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[language_supports]  WITH NOCHECK ADD  CONSTRAINT [FK_language_supports_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[language_supports] CHECK CONSTRAINT [FK_language_supports_games]
+ALTER TABLE [dbo].[language_supports] NOCHECK CONSTRAINT [FK_language_supports_games]
 GO
-ALTER TABLE [dbo].[language_supports]  WITH CHECK ADD  CONSTRAINT [FK_language_supports_language_support_types] FOREIGN KEY([language_support_type])
+ALTER TABLE [dbo].[language_supports]  WITH NOCHECK ADD  CONSTRAINT [FK_language_supports_language_support_types] FOREIGN KEY([language_support_type])
 REFERENCES [dbo].[language_support_types] ([id])
 GO
-ALTER TABLE [dbo].[language_supports] CHECK CONSTRAINT [FK_language_supports_language_support_types]
+ALTER TABLE [dbo].[language_supports] NOCHECK CONSTRAINT [FK_language_supports_language_support_types]
 GO
-ALTER TABLE [dbo].[multiplayer_modes]  WITH CHECK ADD  CONSTRAINT [FK_multiplayer_modes_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[multiplayer_modes]  WITH NOCHECK ADD  CONSTRAINT [FK_multiplayer_modes_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[multiplayer_modes] CHECK CONSTRAINT [FK_multiplayer_modes_games]
+ALTER TABLE [dbo].[multiplayer_modes] NOCHECK CONSTRAINT [FK_multiplayer_modes_games]
 GO
-ALTER TABLE [dbo].[multiplayer_modes]  WITH CHECK ADD  CONSTRAINT [FK_multiplayer_modes_platforms] FOREIGN KEY([platform])
+ALTER TABLE [dbo].[multiplayer_modes]  WITH NOCHECK ADD  CONSTRAINT [FK_multiplayer_modes_platforms] FOREIGN KEY([platform])
 REFERENCES [dbo].[platforms] ([id])
 GO
-ALTER TABLE [dbo].[multiplayer_modes] CHECK CONSTRAINT [FK_multiplayer_modes_platforms]
+ALTER TABLE [dbo].[multiplayer_modes] NOCHECK CONSTRAINT [FK_multiplayer_modes_platforms]
 GO
-ALTER TABLE [dbo].[platform_version_companies]  WITH CHECK ADD  CONSTRAINT [FK_platform_version_companies_companies] FOREIGN KEY([company])
+ALTER TABLE [dbo].[platform_version_companies]  WITH NOCHECK ADD  CONSTRAINT [FK_platform_version_companies_companies] FOREIGN KEY([company])
 REFERENCES [dbo].[companies] ([id])
 GO
-ALTER TABLE [dbo].[platform_version_companies] CHECK CONSTRAINT [FK_platform_version_companies_companies]
+ALTER TABLE [dbo].[platform_version_companies] NOCHECK CONSTRAINT [FK_platform_version_companies_companies]
 GO
-ALTER TABLE [dbo].[platform_version_release_dates]  WITH CHECK ADD  CONSTRAINT [FK_platform_version_release_dates_platform_versions] FOREIGN KEY([platform_version])
+ALTER TABLE [dbo].[platform_version_release_dates]  WITH NOCHECK ADD  CONSTRAINT [FK_platform_version_release_dates_platform_versions] FOREIGN KEY([platform_version])
 REFERENCES [dbo].[platform_versions] ([id])
 GO
-ALTER TABLE [dbo].[platform_version_release_dates] CHECK CONSTRAINT [FK_platform_version_release_dates_platform_versions]
+ALTER TABLE [dbo].[platform_version_release_dates] NOCHECK CONSTRAINT [FK_platform_version_release_dates_platform_versions]
 GO
-ALTER TABLE [dbo].[platform_versions]  WITH CHECK ADD  CONSTRAINT [FK_platform_versions_platform_version_companies] FOREIGN KEY([main_manufacturer])
+ALTER TABLE [dbo].[platform_versions]  WITH NOCHECK ADD  CONSTRAINT [FK_platform_versions_platform_version_companies] FOREIGN KEY([main_manufacturer])
 REFERENCES [dbo].[platform_version_companies] ([id])
 GO
-ALTER TABLE [dbo].[platform_versions] CHECK CONSTRAINT [FK_platform_versions_platform_version_companies]
+ALTER TABLE [dbo].[platform_versions] NOCHECK CONSTRAINT [FK_platform_versions_platform_version_companies]
 GO
-ALTER TABLE [dbo].[platforms]  WITH CHECK ADD  CONSTRAINT [FK_platforms_platform_families] FOREIGN KEY([platform_family])
+ALTER TABLE [dbo].[platforms]  WITH NOCHECK ADD  CONSTRAINT [FK_platforms_platform_families] FOREIGN KEY([platform_family])
 REFERENCES [dbo].[platform_families] ([id])
 GO
-ALTER TABLE [dbo].[platforms] CHECK CONSTRAINT [FK_platforms_platform_families]
+ALTER TABLE [dbo].[platforms] NOCHECK CONSTRAINT [FK_platforms_platform_families]
 GO
-ALTER TABLE [dbo].[release_dates]  WITH CHECK ADD  CONSTRAINT [FK_release_dates_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[release_dates]  WITH NOCHECK ADD  CONSTRAINT [FK_release_dates_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[release_dates] CHECK CONSTRAINT [FK_release_dates_games]
+ALTER TABLE [dbo].[release_dates] NOCHECK CONSTRAINT [FK_release_dates_games]
 GO
-ALTER TABLE [dbo].[release_dates]  WITH CHECK ADD  CONSTRAINT [FK_release_dates_platforms] FOREIGN KEY([platform])
+ALTER TABLE [dbo].[release_dates]  WITH NOCHECK ADD  CONSTRAINT [FK_release_dates_platforms] FOREIGN KEY([platform])
 REFERENCES [dbo].[platforms] ([id])
 GO
-ALTER TABLE [dbo].[release_dates] CHECK CONSTRAINT [FK_release_dates_platforms]
+ALTER TABLE [dbo].[release_dates] NOCHECK CONSTRAINT [FK_release_dates_platforms]
 GO
-ALTER TABLE [dbo].[release_dates]  WITH CHECK ADD  CONSTRAINT [FK_release_dates_release_date_statuses] FOREIGN KEY([status])
+ALTER TABLE [dbo].[release_dates]  WITH NOCHECK ADD  CONSTRAINT [FK_release_dates_release_date_statuses] FOREIGN KEY([status])
 REFERENCES [dbo].[release_date_statuses] ([id])
 GO
-ALTER TABLE [dbo].[release_dates] CHECK CONSTRAINT [FK_release_dates_release_date_statuses]
+ALTER TABLE [dbo].[release_dates] NOCHECK CONSTRAINT [FK_release_dates_release_date_statuses]
 GO
-ALTER TABLE [dbo].[search]  WITH CHECK ADD  CONSTRAINT [FK_search_collections] FOREIGN KEY([collection])
+ALTER TABLE [dbo].[search]  WITH NOCHECK ADD  CONSTRAINT [FK_search_collections] FOREIGN KEY([collection])
 REFERENCES [dbo].[collections] ([id])
 GO
-ALTER TABLE [dbo].[search] CHECK CONSTRAINT [FK_search_collections]
+ALTER TABLE [dbo].[search] NOCHECK CONSTRAINT [FK_search_collections]
 GO
-ALTER TABLE [dbo].[search]  WITH CHECK ADD  CONSTRAINT [FK_search_companies] FOREIGN KEY([company])
+ALTER TABLE [dbo].[search]  WITH NOCHECK ADD  CONSTRAINT [FK_search_companies] FOREIGN KEY([company])
 REFERENCES [dbo].[companies] ([id])
 GO
-ALTER TABLE [dbo].[search] CHECK CONSTRAINT [FK_search_companies]
+ALTER TABLE [dbo].[search] NOCHECK CONSTRAINT [FK_search_companies]
 GO
-ALTER TABLE [dbo].[search]  WITH CHECK ADD  CONSTRAINT [FK_search_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[search]  WITH NOCHECK ADD  CONSTRAINT [FK_search_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[search] CHECK CONSTRAINT [FK_search_games]
+ALTER TABLE [dbo].[search] NOCHECK CONSTRAINT [FK_search_games]
 GO
-ALTER TABLE [dbo].[search]  WITH CHECK ADD  CONSTRAINT [FK_search_platforms] FOREIGN KEY([platform])
+ALTER TABLE [dbo].[search]  WITH NOCHECK ADD  CONSTRAINT [FK_search_platforms] FOREIGN KEY([platform])
 REFERENCES [dbo].[platforms] ([id])
 GO
-ALTER TABLE [dbo].[search] CHECK CONSTRAINT [FK_search_platforms]
+ALTER TABLE [dbo].[search] NOCHECK CONSTRAINT [FK_search_platforms]
 GO
-ALTER TABLE [dbo].[search]  WITH CHECK ADD  CONSTRAINT [FK_search_themes] FOREIGN KEY([theme])
+ALTER TABLE [dbo].[search]  WITH NOCHECK ADD  CONSTRAINT [FK_search_themes] FOREIGN KEY([theme])
 REFERENCES [dbo].[themes] ([id])
 GO
-ALTER TABLE [dbo].[search] CHECK CONSTRAINT [FK_search_themes]
+ALTER TABLE [dbo].[search] NOCHECK CONSTRAINT [FK_search_themes]
 GO
-ALTER TABLE [dbo].[websites]  WITH CHECK ADD  CONSTRAINT [FK_websites_games] FOREIGN KEY([game])
+ALTER TABLE [dbo].[websites]  WITH NOCHECK ADD  CONSTRAINT [FK_websites_games] FOREIGN KEY([game])
 REFERENCES [dbo].[games] ([id])
 GO
-ALTER TABLE [dbo].[websites] CHECK CONSTRAINT [FK_websites_games]
+ALTER TABLE [dbo].[websites] NOCHECK CONSTRAINT [FK_websites_games]
 GO
 USE [master]
 GO
