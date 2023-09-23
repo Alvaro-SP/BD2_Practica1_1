@@ -41,15 +41,15 @@ CREATE VIEW consulta1
 AS
 
 SELECT TOP (100) [id]
-	  ,[name]
-      ,[rating]
-	  ,[aggregated_rating]
-      ,(SELECT dbo.obtenerGeneros([genres])) as Generos     
-      ,(SELECT dbo.obtenerPlataformas([platforms])) as Plataformas  
-	  ,url
-  FROM [PROYECTO_CLASE].[dbo].[games]
-  ORDER BY [rating] DESC
+    ,[name]
+    ,ROUND([rating], 2) as rating
+    ,ROUND([aggregated_rating], 2) as rating
+    ,(SELECT dbo.obtenerGeneros([genres])) as Generos     
+    ,(SELECT dbo.obtenerPlataformas([platforms])) as Plataformas  
+    ,url
+FROM [PROYECTO_CLASE].[dbo].[games]
+ORDER BY [rating] DESC
 
- GO
- SELECT * FROM consulta1;
- GO
+GO
+SELECT * FROM consulta1;
+GO

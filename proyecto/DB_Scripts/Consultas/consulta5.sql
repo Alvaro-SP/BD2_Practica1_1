@@ -8,7 +8,7 @@ AS
 BEGIN
     SELECT TOP (1000) [id]
         ,[name]
-        ,[rating]
+        ,ROUND([rating], 2)
         ,(SELECT dbo.obtenerGeneros([genres])) as Generos
         ,[aggregated_rating]
         ,[platforms]
@@ -19,3 +19,4 @@ BEGIN
 END;
 GO
 
+EXEC c5;

@@ -30,12 +30,28 @@ BEGIN
     -- FROM [PROYECTO_CLASE].[dbo].[games] G
     -- WHERE CHARINDEX(@palabraBusqueda, G.name) > 0;
     
-    DECLARE gameCursor CURSOR FOR
-    SELECT G.id, G.name, G.rating, G.url, G.platforms, G.summary
-    FROM [PROYECTO_CLASE].[dbo].[games] G
-    CROSS APPLY STRING_SPLIT(name, ' ') AS Words  --separar por palabras
-    WHERE LEN(Words.value) > 4 --palabras de mas de 4 letras
-      AND CHARINDEX(@palabraBusqueda, Words.value) > 0; --buscar coincidencias
+    
+
+    
+    IF LEN(@palabraBusqueda) < 4
+    BEGIN
+        -- Declarar un cursor para iterar a través de los juegos
+        DECLARE gameCursor CURSOR FOR
+        SELECT G.id, G.name, G.rating, G.url, G.platforms, G.summary
+        FROM [PROYECTO_CLASE].[dbo].[games] G
+        CROSS APPLY STRING_SPLIT(name, ' ') AS Words  --separar por palabras
+        WHERE LEN(Words.value) > 4 --palabras de mas de 4 letras
+        AND CHARINDEX(@palabraBusqueda, Words.value) > 0; --buscar coincidencias
+    END
+    ELSE
+    BEGIN
+        -- Buscar coincidencias en cada palabra de name que tenga más de 4 caracteres
+        -- Declarar un cursor para iterar a través de los juegos
+        DECLARE gameCursor CURSOR FOR
+        SELECT G.id, G.name, G.rating, G.url, G.platforms, G.summary
+        FROM [PROYECTO_CLASE].[dbo].[games] G
+        WHERE  CHARINDEX(@palabraBusqueda, name) > 0;
+    END
 
     -- Variables para almacenar los valores del juego actual
     DECLARE @gameID INT;
@@ -134,14 +150,27 @@ BEGIN
         PlatformURL NVARCHAR(MAX)
     );
 
-    -- Declarar un cursor para iterar a través de los juegos
-    DECLARE gameCursor CURSOR FOR
-    SELECT G.id, G.name, G.rating, P.Numero
-    FROM [PROYECTO_CLASE].[dbo].[games] G
-    CROSS APPLY STRING_SPLIT(name, ' ') AS Words  --separar por palabras
-    CROSS APPLY dbo.ParseNumbersFromText(G.platforms) P
-    WHERE LEN(Words.value) > 4 --palabras de mas de 4 letras
-      AND CHARINDEX(@palabraBusqueda, Words.value) > 0; --buscar coincidencias
+    IF LEN(@palabraBusqueda) < 4
+    BEGIN
+        -- Declarar un cursor para iterar a través de los juegos
+        DECLARE gameCursor CURSOR FOR
+        SELECT G.id, G.name, G.rating, P.Numero
+        FROM [PROYECTO_CLASE].[dbo].[games] G
+        CROSS APPLY STRING_SPLIT(name, ' ') AS Words  --separar por palabras
+        CROSS APPLY dbo.ParseNumbersFromText(G.platforms) P
+        WHERE LEN(Words.value) > 4 --palabras de mas de 4 letras
+        AND CHARINDEX(@palabraBusqueda, Words.value) > 0; --buscar coincidencias
+    END
+    ELSE
+    BEGIN
+        -- Buscar coincidencias en cada palabra de name que tenga más de 4 caracteres
+        -- Declarar un cursor para iterar a través de los juegos
+        DECLARE gameCursor CURSOR FOR
+        SELECT G.id, G.name, G.rating, P.Numero
+        FROM [PROYECTO_CLASE].[dbo].[games] G
+        CROSS APPLY dbo.ParseNumbersFromText(G.platforms) P
+        WHERE  CHARINDEX(@palabraBusqueda, name) > 0;
+    END
 
     -- Variables para almacenar los valores del juego actual
     DECLARE @gameID INT;

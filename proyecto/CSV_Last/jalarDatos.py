@@ -23,7 +23,7 @@ def jalarDatos(url, fields):
     #     csv_writer.writeheader()
 
     # Realiza solicitudes paginadas hasta que no haya más resultados
-    offset = 0
+    offset = 5000
     while True:
         response = post(url, **{
                 'headers': {

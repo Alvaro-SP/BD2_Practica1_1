@@ -1,7 +1,6 @@
 
 --! ------------------ PROCEDURE GENERAL ------------------
 -- Stored procedure que reciba un parámetro alfanumérico para buscar juegos por nombre (palabras o aproximaciones). 
-
 DROP PROCEDURE IF EXISTS infogame;
 GO
 CREATE PROCEDURE infogame
@@ -23,17 +22,27 @@ BEGIN
 		,alternative_names
         ,(SELECT dbo.obtenerGeneros([genres])) as Generos
         ,(SELECT dbo.obtenerPlataformas([platforms])) as Plataformas
-		,rating
-        ,aggregated_rating
-        ,rating_count
+		,ROUND([rating], 2) as rating
+        ,ROUND([aggregated_rating], 2) as rating
+        ,rating_count AS Total_ratings
 		,summary
-        ,release_dates
-        ,
+        ,(SELECT dbo.obtenerReleaseSpliteado([release_dates])) as Release_dates
+        ,(SELECT dbo.obtenerDevelopers([involved_companies])) as Developers
+        ,(SELECT dbo.obtenerDevelopers([involved_companies])) as Publishers
         ,url
+		,(SELECT dbo.obtenerGeneros([genres])) as Genre
+        ,(SELECT dbo.obtenerTemas([themes])) as Themes
+        ,(SELECT dbo.obtenerGameMode([game_modes])) as Game_modes
+        ,(SELECT dbo.obtenerPerspectivas([player_perspectives])) as Player_perspectives
+        ,(SELECT dbo.obtenerSeriesCollections([collection])) as Series
+        ,storyline
+        ,(SELECT dbo.obtenerSeriesCollections([collection])) as Franchises
+        ,(SELECT dbo.obtenerengines([game_engines])) as GameEngine
+        ,(SELECT dbo.obtenergamelocalization([game_localizations])) as Game_Localizations
+        ,(SELECT dbo.obtenerAlternativenames([alternative_names])) as Alternative_Names
+        
     FROM [PROYECTO_CLASE].[dbo].[games]
-    CROSS APPLY STRING_SPLIT(name, ' ') AS Words
-    WHERE LEN(Words.value) > 4
-    AND CHARINDEX(@palabraBusqueda, Words.value) > 0;
+    WHERE CHARINDEX(@palabraBusqueda, name) > 0;
 END;
 
-EXEC infogame 'zelda' 
+EXEC infogame 'The Legend of Zelda: Phantom Hourglass' 
