@@ -1,0 +1,29 @@
+{
+    "IGDB_ID": "id",
+    "name": "name",
+    "FechaRelease": "FechaReleaseValue",
+    "alternative_names": "alternative_names",
+    "Generos": "GenerosValue",
+    "Plataformas": "PlataformasValue",
+    "rating": 3.5,
+    "Total_ratings": 1000,
+    "summary": "summary",
+    "Release_dates": "Release_datesValue",
+    "Developers": "DevelopersValue",
+    "Publishers": "PublishersValue",
+    "url": "url",
+    "Genre": "GenreValue",
+    "Themes": "ThemesValue",
+    "Game_modes": "Game_modesValue",
+    "Player_perspectives": "Player_perspectivesValue",
+    "Series": "SeriesValue",
+    "storyline": "storyline",
+    "Franchises": "FranchisesValue",
+    "GameEngine": "GameEngineValue",
+    "Game_Localizations": "Game_LocalizationsValue",
+    "Alternative_Names": "Alternative_NamesValue",
+
+
+    "language_supports": [{}, {}, {}],
+    "aggregated_rating": 3.5
+}
