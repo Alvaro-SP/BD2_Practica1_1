@@ -1,29 +1,239 @@
 {
-    "IGDB_ID": "id",
-    "name": "name",
-    "FechaRelease": "FechaReleaseValue",
-    "alternative_names": "alternative_names",
-    "Generos": "GenerosValue",
-    "Plataformas": "PlataformasValue",
-    "rating": 3.5,
-    "Total_ratings": 1000,
-    "summary": "summary",
-    "Release_dates": "Release_datesValue",
-    "Developers": "DevelopersValue",
-    "Publishers": "PublishersValue",
-    "url": "url",
-    "Genre": "GenreValue",
-    "Themes": "ThemesValue",
-    "Game_modes": "Game_modesValue",
-    "Player_perspectives": "Player_perspectivesValue",
-    "Series": "SeriesValue",
-    "storyline": "storyline",
-    "Franchises": "FranchisesValue",
-    "GameEngine": "GameEngineValue",
-    "Game_Localizations": "Game_LocalizationsValue",
-    "Alternative_Names": "Alternative_NamesValue",
-
-
-    "language_supports": [{}, {}, {}],
-    "aggregated_rating": 3.5
+    "id": 122229,
+    "alternative_names": [
+        {
+            "id": 88946,
+            "comment": "Japanese title - original",
+            "name": "\u30b9\u30fc\u30d1\u30fc\u30ab\u30fc\u30d3\u30a3\u30cf\u30f3\u30bf\u30fc\u30ba"
+        },
+        {
+            "id": 88948,
+            "comment": "Japanese title - translated",
+            "name": "Super Kirby Hunters"
+        },
+        {
+            "id": 88974,
+            "comment": "Japanese title - romanization",
+            "name": "Super Kirby Hunters"
+        },
+        {
+            "id": 95773,
+            "comment": "Korean title",
+            "name": "\uc288\ud37c \ucee4\ube44 \ud5cc\ud130\uc988"
+        }
+    ],
+    "collection": [
+        {
+            "id": 7271,
+            "name": "Kirby Clash",
+            "url": "https://www.igdb.com/collections/kirby-clash"
+        }
+    ],
+    "first_release_date": 1567555200.0,
+    "franchises": [
+        {
+            "id": 789,
+            "name": "Kirby"
+        }
+    ],
+    "game_localizations": [
+        {
+            "id": 12183,
+            "name": "\u30b9\u30fc\u30d1\u30fc\u30ab\u30fc\u30d3\u30a3\u30cf\u30f3\u30bf\u30fc\u30ba",
+            "region": 3
+        },
+        {
+            "id": 20983,
+            "name": "\uc288\ud37c \ucee4\ube44 \ud5cc\ud130\uc988",
+            "region": 2
+        }
+    ],
+    "game_modes": [
+        {
+            "id": 1,
+            "name": "Single player"
+        },
+        {
+            "id": 2,
+            "name": "Multiplayer"
+        },
+        {
+            "id": 3,
+            "name": "Co-operative"
+        }
+    ],
+    "genres": [
+        {
+            "id": 31,
+            "name": "Adventure"
+        },
+        {
+            "id": 33,
+            "name": "Arcade"
+        }
+    ],
+    "involved_companies": [
+        {
+            "id": 95390,
+            "company": [
+                {
+                    "id": 70,
+                    "description": "Nintendo is a multinational corporation located in Kyoto  Japan. Founded by Fusajiro Yamauchi  it first produced handmade hanafuda cards and also tried several small niche businesses such as a cab company and a love hotel. Nintendo developed into a video game company  becoming one of the most influential in the industry and Japan s third most valuable listed company. The name Nintendo translated from Japanese to English means  Leave luck to Heaven .",
+                    "name": "Nintendo",
+                    "url": "https://www.igdb.com/companies/nintendo"
+                }
+            ]
+        },
+        {
+            "id": 171431,
+            "company": [
+                {
+                    "id": 762,
+                    "description": "HAL Laboratory is a Japanese game developer partnered with Nintendo. It was founded by a small group of friends who shared the desire to create games  and among said group was Satoru Iwata. The group developed games for numerous platforms at first before developing exclusively for Nintendo. The name HAL originates from the fictional computer HAL 9000 from 2001: A Space Odyssey  as well as each letter being one letter before IBM. HAL Laboratory is most notable for developing the Kirby series created by ex-employee Masahiro Sakurai  they are also responsible for the Super Smash Bros. and the EarthBound series.",
+                    "name": "HAL Laboratory",
+                    "url": "https://www.igdb.com/companies/hal-laboratory"
+                }
+            ]
+        },
+        {
+            "id": 171432,
+            "company": [
+                {
+                    "id": 1759,
+                    "name": "Vanpool",
+                    "url": "https://www.igdb.com/companies/vanpool"
+                }
+            ]
+        }
+    ],
+    "language_supports": [
+        {
+            "id": 498276,
+            "language": [
+                {
+                    "id": 2,
+                    "locale": "zh-CN",
+                    "name": "Chinese (Simplified)",
+                    "native_name": "\u7b80\u4f53\u4e2d\u6587"
+                }
+            ]
+        },
+        {
+            "id": 498277,
+            "language": [
+                {
+                    "id": 6,
+                    "locale": "nl-NL",
+                    "name": "Dutch",
+                    "native_name": "Nederlands"
+                }
+            ]
+        },
+        {
+            "id": 498279,
+            "language": [
+                {
+                    "id": 7,
+                    "locale": "en-US",
+                    "name": "English",
+                    "native_name": "English (US)"
+                }
+            ]
+        },
+        {
+            "id": 498280,
+            "language": [
+                {
+                    "id": 12,
+                    "locale": "fr-FR",
+                    "name": "French",
+                    "native_name": "Fran\u00e7ais"
+                }
+            ]
+        },
+        {
+            "id": 498281,
+            "language": [
+                {
+                    "id": 15,
+                    "locale": "it-IT",
+                    "name": "Italian",
+                    "native_name": "Italiano"
+                }
+            ]
+        },
+        {
+            "id": 498283,
+            "language": [
+                {
+                    "id": 16,
+                    "locale": "ja-JP",
+                    "name": "Japanese",
+                    "native_name": "\u65e5\u672c\u8a9e"
+                }
+            ]
+        },
+        {
+            "id": 498284,
+            "language": [
+                {
+                    "id": 17,
+                    "locale": "ko-KR",
+                    "name": "Korean",
+                    "native_name": "\ud55c\uad6d\uc5b4"
+                }
+            ]
+        },
+        {
+            "id": 498286,
+            "language": [
+                {
+                    "id": 9,
+                    "locale": "es-ES",
+                    "name": "Spanish (Spain)",
+                    "native_name": "Espa\u00f1ol (Espa\u00f1a)"
+                }
+            ]
+        }
+    ],
+    "name": "Super Kirby Clash",
+    "platforms": [
+        {
+            "id": 130,
+            "abbreviation": "Switch",
+            "alternative_name": "NX",
+            "name": "Nintendo Switch"
+        }
+    ],
+    "player_perspectives": [
+        {
+            "id": 4,
+            "name": "Side view"
+        }
+    ],
+    "rating": 50.974985002304,
+    "rating_count": 6.0,
+    "release_dates": [
+        {
+            "id": 359481,
+            "human": "Sep 04, 2019"
+        },
+        {
+            "id": 359482,
+            "human": "Sep 05, 2019"
+        },
+        {
+            "id": 359483,
+            "human": "Sep 05, 2019"
+        }
+    ],
+    "storyline": "Long  long ago  in a faraway realm  there was a beautiful  peaceful land called the Dream Kingdom. One surprising day  Hornhead went on a rampage across the Seaside. And so it came to pass that Team Kirby set off on an adventure to restore peace to the kingdom...",
+    "summary": "Power through bosses on a team of four!  To defeat bosses this wicked  it\u2019ll take a whole team of Kirbys! In this free-to-start multiplayer action game  you can choose from four unique Roles and join up to three other players to take down tough bosses. Puff up your power by crafting weapons and spending materials at the shop to receive even MORE weapons  not to mention armor and items. Pass a Joy-Con controller to a friend to play locally  and if you have a Nintendo Switch Online membership  you can even play online!  Are you a Sword Hero? Hammer Lord? Beam Mage? Or Doctor Healmore?! No matter what  each mighty role offers up a unique way to play. Story Quest lets players team-up locally by sharing Joy-Con controllers  while Party Quest enables users to play together on one system  via local wireless  or online. Plus  tapping compatible amiibo figures/accessories will earn you extra fragments to help craft new gear! Are you ready? For Kirby  the answer is always fight and flight.",
+    "themes": [
+        {
+            "id": 1,
+            "name": "Action"
+        }
+    ],
+    "url": "https://www.igdb.com/games/super-kirby-clash"
 }
