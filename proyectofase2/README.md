@@ -52,9 +52,9 @@ Utilizando la herramineta: [Hackolade](https://hackolade.com/) - Polyglot data m
 
 ### <a id="44b37304-5d2c-4d7d-90c2-52464ab86747-children"></a>2.1.1 Collecciones **mongodbVSCodePlaygroundDB** 
 
-### <a id="9b63503b-4205-47aa-93f1-0ecf4583695a"></a>2.1.1.1 Collection **games**
+### <a id="9b63503b-4205-47aa-93f1-0ecf4583695a"></a>2.1.1.1  **games**
 
-<table class="collection-properties-table"><thead><tr><td>Propiedad</td><td>Valor</td></tr></thead><tbody><tr><td>Collection name</td><td>games</td></tr><tr</tbody></table>
+<table class="collection-properties-table"><thead><tr><td>Propiedad</td><td>Valor</td></tr></thead><tbody><tr><td>Nombre de la Colección</td><td>games</td></tr><tr</tbody></table>
 
 ##### Diagrama de árbol
 
