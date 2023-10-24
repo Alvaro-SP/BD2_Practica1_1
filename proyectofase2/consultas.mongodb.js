@@ -198,5 +198,67 @@ query2Results.forEach(function (item) {
 			item.game_engines.map((g) => "\t - " + g.name).join(", ")
 		);
 	}
-	console.log("----------------------");
+	console.log("****************************************************************************************");
 });*/
+
+
+
+
+// Query 3:
+/*const query3 = (name) => {
+	// The regex
+	const regex = new RegExp(name, 'i');
+	// The query
+	const query = {
+		name: {
+			$regex: regex,
+		},
+	};
+	// Find all the games
+	const results = db.getCollection("games").find(query).toArray();
+	return results;
+};
+
+// Get the search results.
+const query3Results = query3("The Legend");
+
+// Print the results.
+query3Results.forEach(function (item) {
+    console.log("****************************************************************************************");
+	console.log("\nName:" + item.name);
+	if (Array.isArray(item.platforms)) {
+		console.log(
+			"\nPlatforms:\n",
+			item.platforms.map((platform) => "\tPlatform name: " + platform.name+ " --- Platform Abbreviation: "+platform.abbreviation).join("\n"),
+		);
+	}else{
+        console.log("\nPlatforms:" + " No information");
+    }
+	if (item.rating) {
+		console.log("\nRating:" + item.rating);
+	}else{
+        console.log("\nRating:" + " No information");
+    }
+	if (item.aggregated_rating) {
+		console.log("\naggregated_rating:" + item.aggregated_rating);
+	}else{
+        console.log("\naggregated_rating:" + " No information");
+    }
+	if (item.rating_count) {
+		console.log("\nrating_count:" + item.rating_count);
+	}else{
+        console.log("\nrating_count:" + " No information");
+    }
+	if (item.summary) {
+		console.log("\nsummary:" + item.summary);
+	}else{
+        console.log("\nsummary:" + " No information");
+    }
+	if (Array.isArray(item.genres)) {
+		console.log("\ngenres:", item.genres.map((g) => "\t - " + g.name).join(", "));
+	}else{
+        console.log("\ngenres:" + " No information");
+    }
+	console.log("\n****************************************************************************************");
+});
+*/
