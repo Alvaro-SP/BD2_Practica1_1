@@ -93,7 +93,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
         },
         "game_modes": {
             "type": "array",
-            "additionalItems": Si,
+            "additionalItems": true,
             "items": {
                 "type": "object",
                 "properties": {
@@ -104,7 +104,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "string"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "name"
@@ -113,7 +113,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
         },
         "genres": {
             "type": "array",
-            "additionalItems": Si,
+            "additionalItems": true,
             "items": {
                 "type": "object",
                 "properties": {
@@ -124,7 +124,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "string"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "name"
@@ -144,7 +144,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                     },
                     "company": {
                         "type": "array",
-                        "additionalItems": Si,
+                        "additionalItems": true,
                         "items": {
                             "type": "object",
                             "properties": {
@@ -161,7 +161,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                                     "type": "string"
                                 }
                             },
-                            "additionalProperties": Si,
+                            "additionalProperties": true,
                             "required": [
                                 "id",
                                 "name",
@@ -170,13 +170,13 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         }
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "company"
                 ]
             },
-            "additionalItems": Si
+            "additionalItems": true
         },
         "language_supports": {
             "type": [
@@ -191,7 +191,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                     },
                     "language": {
                         "type": "array",
-                        "additionalItems": Si,
+                        "additionalItems": true,
                         "items": {
                             "type": "object",
                             "properties": {
@@ -208,7 +208,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                                     "type": "string"
                                 }
                             },
-                            "additionalProperties": Si,
+                            "additionalProperties": true,
                             "required": [
                                 "id",
                                 "locale",
@@ -218,20 +218,20 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         }
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "language"
                 ]
             },
-            "additionalItems": Si
+            "additionalItems": true
         },
         "name": {
             "type": "string"
         },
         "platforms": {
             "type": "array",
-            "additionalItems": Si,
+            "additionalItems": true,
             "items": {
                 "type": "object",
                 "properties": {
@@ -251,7 +251,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "string"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "name"
@@ -260,7 +260,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
         },
         "player_perspectives": {
             "type": "array",
-            "additionalItems": Si,
+            "additionalItems": true,
             "items": {
                 "type": "object",
                 "properties": {
@@ -271,7 +271,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "string"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "name"
@@ -293,20 +293,20 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "string"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "human"
                 ]
             },
-            "additionalItems": Si
+            "additionalItems": true
         },
         "summary": {
             "type": "string"
         },
         "themes": {
             "type": "array",
-            "additionalItems": Si,
+            "additionalItems": true,
             "items": {
                 "type": "object",
                 "properties": {
@@ -317,7 +317,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "string"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "name"
@@ -348,17 +348,17 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "string"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "name"
                 ]
             },
-            "additionalItems": Si
+            "additionalItems": true
         },
         "collection": {
             "type": "array",
-            "additionalItems": Si,
+            "additionalItems": true,
             "items": {
                 "type": "object",
                 "properties": {
@@ -372,7 +372,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "string"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "name",
@@ -382,7 +382,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
         },
         "franchises": {
             "type": "array",
-            "additionalItems": Si,
+            "additionalItems": true,
             "items": {
                 "type": "object",
                 "properties": {
@@ -393,7 +393,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "string"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "name"
@@ -402,7 +402,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
         },
         "game_engines": {
             "type": "array",
-            "additionalItems": Si,
+            "additionalItems": true,
             "items": {
                 "type": "object",
                 "properties": {
@@ -413,7 +413,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "string"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "name"
@@ -438,13 +438,13 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
                         "type": "number"
                     }
                 },
-                "additionalProperties": Si,
+                "additionalProperties": true,
                 "required": [
                     "id",
                     "region"
                 ]
             },
-            "additionalItems": Si
+            "additionalItems": true
         },
         "rating": {
             "type": "number"
@@ -456,7 +456,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
             "type": "string"
         }
     },
-    "additionalProperties": Si,
+    "additionalProperties": true,
     "required": [
         "_id",
         "id",
@@ -465,6 +465,9 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
     ]
 }
 ```
+
+
+
 
 ##### [GAMES] Target Script 
 
@@ -475,7 +478,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
 use Core Data;
 
 db.createCollection("games", {
-    "capped": No,
+    "capped": false,
     "validator": {
         "$jsonSchema": {
             "bsonType": "object",
@@ -492,7 +495,7 @@ db.createCollection("games", {
                 },
                 "game_modes": {
                     "bsonType": "array",
-                    "additionalItems": Si,
+                    "additionalItems": true,
                     "items": {
                         "bsonType": "object",
                         "properties": {
@@ -503,7 +506,7 @@ db.createCollection("games", {
                                 "bsonType": "string"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "name"
@@ -512,7 +515,7 @@ db.createCollection("games", {
                 },
                 "genres": {
                     "bsonType": "array",
-                    "additionalItems": Si,
+                    "additionalItems": true,
                     "items": {
                         "bsonType": "object",
                         "properties": {
@@ -523,7 +526,7 @@ db.createCollection("games", {
                                 "bsonType": "string"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "name"
@@ -543,7 +546,7 @@ db.createCollection("games", {
                             },
                             "company": {
                                 "bsonType": "array",
-                                "additionalItems": Si,
+                                "additionalItems": true,
                                 "items": {
                                     "bsonType": "object",
                                     "properties": {
@@ -560,7 +563,7 @@ db.createCollection("games", {
                                             "bsonType": "string"
                                         }
                                     },
-                                    "additionalProperties": Si,
+                                    "additionalProperties": true,
                                     "required": [
                                         "id",
                                         "name",
@@ -569,13 +572,13 @@ db.createCollection("games", {
                                 }
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "company"
                         ]
                     },
-                    "additionalItems": Si
+                    "additionalItems": true
                 },
                 "language_supports": {
                     "bsonType": [
@@ -590,7 +593,7 @@ db.createCollection("games", {
                             },
                             "language": {
                                 "bsonType": "array",
-                                "additionalItems": Si,
+                                "additionalItems": true,
                                 "items": {
                                     "bsonType": "object",
                                     "properties": {
@@ -607,7 +610,7 @@ db.createCollection("games", {
                                             "bsonType": "string"
                                         }
                                     },
-                                    "additionalProperties": Si,
+                                    "additionalProperties": true,
                                     "required": [
                                         "id",
                                         "locale",
@@ -617,20 +620,20 @@ db.createCollection("games", {
                                 }
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "language"
                         ]
                     },
-                    "additionalItems": Si
+                    "additionalItems": true
                 },
                 "name": {
                     "bsonType": "string"
                 },
                 "platforms": {
                     "bsonType": "array",
-                    "additionalItems": Si,
+                    "additionalItems": true,
                     "items": {
                         "bsonType": "object",
                         "properties": {
@@ -650,7 +653,7 @@ db.createCollection("games", {
                                 "bsonType": "string"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "name"
@@ -659,7 +662,7 @@ db.createCollection("games", {
                 },
                 "player_perspectives": {
                     "bsonType": "array",
-                    "additionalItems": Si,
+                    "additionalItems": true,
                     "items": {
                         "bsonType": "object",
                         "properties": {
@@ -670,7 +673,7 @@ db.createCollection("games", {
                                 "bsonType": "string"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "name"
@@ -692,20 +695,20 @@ db.createCollection("games", {
                                 "bsonType": "string"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "human"
                         ]
                     },
-                    "additionalItems": Si
+                    "additionalItems": true
                 },
                 "summary": {
                     "bsonType": "string"
                 },
                 "themes": {
                     "bsonType": "array",
-                    "additionalItems": Si,
+                    "additionalItems": true,
                     "items": {
                         "bsonType": "object",
                         "properties": {
@@ -716,7 +719,7 @@ db.createCollection("games", {
                                 "bsonType": "string"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "name"
@@ -747,17 +750,17 @@ db.createCollection("games", {
                                 "bsonType": "string"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "name"
                         ]
                     },
-                    "additionalItems": Si
+                    "additionalItems": true
                 },
                 "collection": {
                     "bsonType": "array",
-                    "additionalItems": Si,
+                    "additionalItems": true,
                     "items": {
                         "bsonType": "object",
                         "properties": {
@@ -771,7 +774,7 @@ db.createCollection("games", {
                                 "bsonType": "string"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "name",
@@ -781,7 +784,7 @@ db.createCollection("games", {
                 },
                 "franchises": {
                     "bsonType": "array",
-                    "additionalItems": Si,
+                    "additionalItems": true,
                     "items": {
                         "bsonType": "object",
                         "properties": {
@@ -792,7 +795,7 @@ db.createCollection("games", {
                                 "bsonType": "string"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "name"
@@ -801,7 +804,7 @@ db.createCollection("games", {
                 },
                 "game_engines": {
                     "bsonType": "array",
-                    "additionalItems": Si,
+                    "additionalItems": true,
                     "items": {
                         "bsonType": "object",
                         "properties": {
@@ -812,7 +815,7 @@ db.createCollection("games", {
                                 "bsonType": "string"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "name"
@@ -837,13 +840,13 @@ db.createCollection("games", {
                                 "bsonType": "number"
                             }
                         },
-                        "additionalProperties": Si,
+                        "additionalProperties": true,
                         "required": [
                             "id",
                             "region"
                         ]
                     },
-                    "additionalItems": Si
+                    "additionalItems": true
                 },
                 "rating": {
                     "bsonType": "double"
@@ -855,7 +858,7 @@ db.createCollection("games", {
                     "bsonType": "string"
                 }
             },
-            "additionalProperties": Si,
+            "additionalProperties": true,
             "required": [
                 "_id",
                 "id",
@@ -877,11 +880,13 @@ db.games.createIndex({
 ```
 
 
+
 ##### [GAMES] Ejemplo JSON data
+
 
 ```
 {
-    "_id": ObjectId("bf8b75913fc3aa5b92bc8dc2"),
+    "_id": ObjectId("b7b3adf311fa1af757b3deab"),
     "id": Int32(271396),
     "first_release_date": Int32(1735603200),
     "game_modes": [
@@ -991,6 +996,8 @@ db.games.createIndex({
     "storyline": "In the near future  the latest space observation telescope discovers an enormous comet approaching the solar system. Its calculated trajectory is not in danger of colliding with Earth  but the effects its massive size would have on our planet and the sun are unfathomable. The damage caused by the resulting seismic  volcanic  and electromagnetic activity is catastrophic. In response  a large-scale evacuation plan is carried out. Residents  properties  and city functions in areas determined to be affected are almost all relocated to shelters and other regions. In place of its departed citizenry  unmanned AI defense robots called G-Mechs patrol the abandoned areas  effectively turning them into robot towns. The G-Mechs watch and defend the cities  expelling intruders  preventing robberies and accidents  and ensuring structural collapses and fires do not occur. They are to guard the cities until the comet passes and people can return to their homes.  Here enters Four-Seven Security Service. A security company that is dispatched to robot towns no longer inhabited by humans  Four-Seven Security Service provides a variety of defensive services  including crime prevention  building maintenance and repair  and the extinguishing of fires caused by volcanic eruptions. You are a new employee at the company.  A fellow part-time employee is showing you the ropes as you perform maintenance on a few security G-Mechs. Just then  a large earthquake rattles the area under the company s jurisdiction. You receive word that the security G-Mechs in the area have gone rogue  perhaps as a result of the earthquake. You also learn the rogue G-Mechs are equipped with autonomous AI.  As a member of Four-Seven Security Service  it is now your job to address the situation. You take control of the unit provided by the company and set out to suppress the rogue G-Mechs. Jobs like this are a part of the daily routine for a security company  you think to yourself. Little do you know  however  this will turn out to be a battle that alters the fate of mankind..."
 }
 ```
+
+
 
 ### <a id="edges"></a>
 
