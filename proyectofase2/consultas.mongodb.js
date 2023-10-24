@@ -10,12 +10,11 @@
 // https://www.mongodb.com/docs/mongodb-vscode/playgrounds/
 
 // Select the database to use.
-use('mongodbVSCodePlaygroundDB');
+use("mongodbVSCodePlaygroundDB");
 
 // ! AQUI VOY A INSERTAR TODA LA DATA QUE GENERE EL JSON
 // mongoimport --uri "mongodb+srv://3034161730108:dqUeDQxkCYEQDucE@fase2grupo1mongo.qzzcnmt.mongodb.net/" --file 'E:\U
 // sers\PC\Downloads\CSV_fase2\rich_games_optimized.json' -d mongodbVSCodePlaygroundDB -c games --jsonArray --drop
-
 
 // * CONSULTA 1
 // use('mongodbVSCodePlaygroundDB');
@@ -42,9 +41,8 @@ use('mongodbVSCodePlaygroundDB');
 //     console.log("----------------------");
 // });
 
-
 // * CONSULTA GENERAL
-use('mongodbVSCodePlaygroundDB');
+use("mongodbVSCodePlaygroundDB");
 const searchGameByName = (name) => {
     const regex = new RegExp(name, 'i'); // 'i' para que la búsqueda no distinga entre mayúsculas y minúsculas
     const query = { name: { $regex: regex } };
@@ -138,3 +136,67 @@ searchResults.forEach(function (item) {
     console.log('----------------------');
 });
 
+
+
+// Query 2:
+/*const query2 = (name, minWordLength) => {
+	// Create a regex to find a coincidence of a word in a specific words by length
+	const regex = new RegExp(`\\b\\w{${minWordLength},}\\w*${name}\\w*`, "i");
+	// The query
+	const query = {
+		name: {
+			$regex: regex,
+		},
+	};
+	// Find all the games
+	const results = db.getCollection("games").find(query).toArray();
+	return results;
+};
+
+// Get the search results.
+const query2Results = query2("The", 8);
+
+// Print the results.
+query2Results.forEach(function (item) {
+	console.log("Name:" + item.name);
+	if (Array.isArray(item.platforms)) {
+		console.log(
+			"Platforms:",
+			item.platforms.map((platform) => "\t - " + platform.name).join(", ")
+		);
+	}
+	if (item.rating) {
+		console.log("Rating:" + item.rating);
+	}
+	if (item.aggregated_rating) {
+		console.log("aggregated_rating:" + item.aggregated_rating);
+	}
+	if (item.rating_count) {
+		console.log("rating_count:" + item.rating_count);
+	}
+	if (item.summary) {
+		console.log("summary:" + item.summary);
+	}
+	if (Array.isArray(item.genres)) {
+		console.log("genres:", item.genres.map((g) => "\t - " + g.name).join(", "));
+	}
+	if (Array.isArray(item.game_modes)) {
+		console.log(
+			"game_modes:",
+			item.game_modes.map((g) => "\t - " + g.name).join(", ")
+		);
+	}
+	if (Array.isArray(item.franchises)) {
+		console.log(
+			"franchises:",
+			item.franchises.map((g) => "\t - " + g.name).join(", ")
+		);
+	}
+	if (Array.isArray(item.game_engines)) {
+		console.log(
+			"game_engines:",
+			item.game_engines.map((g) => "\t - " + g.name).join(", ")
+		);
+	}
+	console.log("----------------------");
+});*/
