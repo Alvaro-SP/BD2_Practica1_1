@@ -53,7 +53,7 @@ const searchGameByName = (name) => {
 };
 
 // Llamar a la función para buscar juegos por nombre
-const searchResults = searchGameByName('Super'); // Cambia 'Super Mario' por el nombre que desees buscar
+//const searchResults = searchGameByName('Super'); // Cambia 'Super Mario' por el nombre que desees buscar
 function convertirFechaUnixATexto(fechaInt) {
     // Convierte la fecha INT a DATETIME
     const fecha = new Date(fechaInt * 1000); // Multiplicamos por 1000 para convertir segundos a milisegundos
@@ -64,7 +64,7 @@ function convertirFechaUnixATexto(fechaInt) {
     return fechaTexto;
 }
 // Imprimir los resultados
-searchResults.forEach(function (item) {
+/*searchResults.forEach(function (item) {
     console.log('Name:' + item.name);
     if (item.first_release_date) {
         console.log('First release date:', convertirFechaUnixATexto(item.first_release_date));
@@ -136,7 +136,7 @@ searchResults.forEach(function (item) {
     console.log('----------------------');
 });
 
-
+*/
 
 // Query 2:
 /*const query2 = (name, minWordLength) => {
@@ -261,4 +261,82 @@ query3Results.forEach(function (item) {
     }
 	console.log("\n****************************************************************************************");
 });
+*/
+
+
+
+/*const query4 = () => {
+    const pipeline = [
+        {
+            $match: {
+                "language_supports": {
+                    $elemMatch: {
+                        "language": { $exists: true, $not: { $size: 0 } },
+                    },
+                },
+            },
+        },
+        {
+            $addFields: {
+                totalLanguages: {
+                    $size: {
+                        $reduce: {
+                            input: "$language_supports",
+                            initialValue: [],
+                            in: { $setUnion: ["$$value", "$$this.language"] },
+                        },
+                    },
+                },
+            },
+        },
+        {
+            $project: {
+                _id: 0,
+                name: 1,
+                rating: 1,
+                supportedLanguages: "$totalLanguages",
+                "language_supports.language.name": 1,
+            },
+        },
+        {
+            $sort: {
+                supportedLanguages: -1, // Ordena por cantidad de lenguajes soportados (mayor a menor)
+                rating: -1, // Luego, ordena por rating (mayor a menor)
+                name: 1, // En caso de empate en rating, ordena por nombre (ascendente)
+            },
+        },
+        {
+            $limit: 100,
+        },
+    ];
+
+    // Aggregate and sort the games
+    const cursor = db.getCollection("games").aggregate(pipeline);
+
+    // Convert the cursor to an array
+    const results = cursor.toArray();
+
+    // Print the sorted results
+
+    for (let i = 0; i < results.length; i++) {
+        console.log(`#${i + 1}`);
+        console.log(`Nombre: ${results[i].name}`);
+        console.log(`Rating: ${results[i].rating ? results[i].rating :"No information"}`);
+        console.log(`Idiomas Soportados: ${results[i].supportedLanguages}`);
+        const printedLanguages = new Set();
+        if(results[i].language_supports){
+            console.log("Lenguajes Soportados:");
+            results[i].language_supports.forEach((language) => {
+                const languageName = language.language[0].name;
+                if (!printedLanguages.has(languageName)) {
+                    console.log(`- ${language.language[0].name}`);
+                    printedLanguages.add(languageName);
+                }
+                
+            });
+        }
+        console.log("***************************************************");
+    }
+};
+query4();
 */
