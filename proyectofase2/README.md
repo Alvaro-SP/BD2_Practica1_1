@@ -32,7 +32,7 @@ Utilizando la herramineta: [Hackolade](https://hackolade.com/) - Polyglot data m
 
 ##### 1\. Modelo
 
-##### 1.1.2.1 **Detalles** 
+##### 1.1. **Detalles** 
 
 <table><tbody><tr><td><span>Nombre Modelo</span></td><td>Modelo Proyecto Fase 2</td></tr><tr><td><span>Technical name</span></td><td>Core Data</td></tr><tr><div class="docs-markdown"></div></td></tr><tr><td><span>Autores</span></td><td>Grupo 1</td></tr><tr><td><span>Version</span></td><td>1</td></tr><tr><td><span>Target</span></td><td>MongoDB</td></tr><tr><td><span>DB version</span></td><td>v6.0</td>
 </table>
