@@ -300,9 +300,9 @@ query3Results.forEach(function (item) {
         },
         {
             $sort: {
-                supportedLanguages: -1, // Ordena por cantidad de lenguajes soportados (mayor a menor)
-                rating: -1, // Luego, ordena por rating (mayor a menor)
-                name: 1, // En caso de empate en rating, ordena por nombre (ascendente)
+                supportedLanguages: -1, // Sort by supported languages DESC
+                rating: -1, // Sort by rating DESC
+                name: 1, // Sort by name DESC
             },
         },
         {
@@ -339,4 +339,61 @@ query3Results.forEach(function (item) {
     }
 };
 query4();
+*/
+
+
+/*const query5 = (genreToSearch) => {
+    const regexGenre = new RegExp(genreToSearch, "i"); // Case insensitive
+
+    const pipeline = [
+        {
+            $match: {
+                "genres.name": {
+                    $regex: regexGenre
+                }
+            }
+        },
+        {
+            $sort: {
+                rating: -1
+            }
+        },
+        {
+            $limit: 100
+        },
+        {
+            $project: {
+                _id: 0,
+                name: 1,
+                rating: 1,
+                genres: 1
+            }
+        }
+    ];
+
+    // Aggregate and sort the games
+    const cursor = db.getCollection("games").aggregate(pipeline);
+
+    // Convert the cursor to an array
+    const results = cursor.toArray();
+
+    // Print the sorted results
+    for (let i = 0; i < results.length; i++) {
+        console.log(`#${i + 1}`);
+        console.log(`Nombre: ${results[i].name}`);
+        console.log(`Rating: ${results[i].rating}`);
+        console.log("Géneros:");
+        results[i].genres.forEach((genre) => {
+            if (genre.name.match(new RegExp(genreToSearch, "i"))) {
+                console.log(`--------> ${(genre.name)}`); 
+            } else {
+                console.log(`- ${genre.name}`);
+            }
+        });
+        console.log("***************************************************");
+    }
+};
+
+// Call to the query
+query5("Adventure");
 */
