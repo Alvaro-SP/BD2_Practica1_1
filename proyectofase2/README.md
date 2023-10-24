@@ -14,7 +14,16 @@ Autores: Grupo 1
 
 Version: 1
 
+
+Utilizando la documentación oficial para esquemas: 
+
+* [MongoDB Schemas](https://www.mongodb.com/docs/atlas/app-services/schemas/)
+
+* [MongoDB Schema Types](https://www.mongodb.com/docs/atlas/app-services/schemas/types/#bson-types)
+
+
 Utilizando la herramineta: [Hackolade](https://hackolade.com/) - Polyglot data modeling for NoSQL databases, storage formats, REST APIs, and JSON in RDBMS
+
 
 ### <a id="contents"></a>
 
