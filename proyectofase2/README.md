@@ -471,7 +471,7 @@ JSON Schema es una forma de definir y validar la estructura de los datos en un f
 
 ##### [GAMES] Target Script 
 
-"Script de Destino" se referirse a un script que permite la cración de la la coleción de la que se este refiriendo en el ámbito de Esquemas NOSQL.
+"Script de Destino" se referirse a un script que permite la cración de la la coleción de la que se este refiriendo en el ámbito de Esquemas NoSQL.
 
 
 ```
