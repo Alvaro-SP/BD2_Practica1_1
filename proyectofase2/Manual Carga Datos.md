@@ -369,3 +369,38 @@ La carga de datos se llevó a cabo mediante el uso del comando de inserción mas
 ```bash
 mongoimport --uri "nuestraDB" --file 'E:\Users\PC\Downloads\CSV_fase2\rich_games_optimized.json' -d mongodbVSCodePlaygroundDB -c games --jsonArray --drop
 ```
+
+# BACKUP DE LA DB
+
+Se genero un backup de la base de datos en formato SCRIPT SQL
+
+![Alt text](image-11.png)
+
+SE configura el SCHEMA y los datos:
+
+![Alt text](image-12.png)
+
+visualizacion del backup
+
+![Alt text](image-13.png)
+
+Posteriormente se espera a obtener todo:
+
+![Alt text](image-14.png)
+
+Y ya se tiene guardado en un script SQL la base de datos:
+
+![Alt text](image-15.png)
+
+Para recuperarlo simplemente se corre el script generado y listo!
+
+```bash
+
+sqlcmd -S xxxx -U sqlserver -P 1234 -i "E:\Users\PC\Videos\Videos\REPOS TEMP\BD2_Practica1_1\proyectofase2\Backup\backupfase2.sql" -x
+
+sqlcmd -S xxxx -U grupodb -P 1234
+:r "E:\Users\PC\Videos\Videos\REPOS TEMP\BD2_Practica1_1\proyectofase2\Backup\backupfase2.sql"
+
+DROP DATABASE PROYECTO_CLASE;
+
+```
